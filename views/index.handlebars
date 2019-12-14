@@ -1,39 +1,27 @@
-<div class="heroPage" id="heroPage">
-  <div class="hero-full-screen">
+<div class="hero-full-screen">
 
-    <div id="hero-container" class="middle-content-section">
-      <div class="row" id="searchGroup">
-        <div class="row">
-          <div class="form-group">
-            <row class="disp">
+  {{!-- <div class="top-content-section" id="BlankSpace">
+    
+  </div> --}}
 
-              <h3>Enter Name</h3>
-              <!-- This form will be where users input data about the movies -->
-              <form id="movie-form">
-                <label for="movie-input">Enter Name</label>
-                <input type="text" id="movie-input"><br>
-
-                <!-- This button will trigger our AJAX call -->
-                <!-- <input id="find-movie" type="submit" value="Movie Search">
-                                </form> -->
-
-                <!--  dumping our JSON contents in here -->
-                <div id="movie-view"></div>
-                <div id="tv-info"></div>
-
-            </row>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-
+  <div class="middle-content-section center">
+    <h1 id="h1">Welcome to Hidden Timber Farm.<br> Enter Your name.</h1>
+    <input id="input"></input>
+    <button class="button large" id="nameButton">Button</button>
   </div>
 
+  <div class="bottom-content-section" id="scrollButton" data-magellan data-threshold="0">
+    <a href="#main-content-section"><svg xmlns="http://www.w3.org/2000/svg" id="sliderButton" width="24" height="24" viewBox="0 0 24 24"><path d="M24 12c0-6.627-5.373-12-12-12s-12 5.373-12 12 5.373 12 12 12 12-5.373 12-12zm-18.005-1.568l1.415-1.414 4.59 4.574 4.579-4.574 1.416 1.414-5.995 5.988-6.005-5.988z"/></svg></a>
+  </div>
+
+
+
+<div id="main-content-section" data-magellan-target="main-content-section">
+  <!-- your content goes here -->
 </div>
 
 </div>
+
 
 <div id="home">
   <div class="container">

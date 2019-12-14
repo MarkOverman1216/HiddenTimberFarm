@@ -1,33 +1,30 @@
 .list-group-item {
   line-height: 2.5;
 }
-
-<<<<<<< Updated upstream
-body {
-  background: pink;
-}
-=======
+/* Intro Page CSS */
 
 .hero-full-screen {
   height: 100vh;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background: url("https://images.pexels.com/photos/378273/pexels-photo-378273.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb") center center no-repeat;
+  background: url("/images/introbg.jpg") center center no-repeat;
   background-size: cover;
 }
 
+.middle-content-section.center {
+  align-self: center
+}
+
 .hero-full-screen .middle-content-section {
-  text-align: center;
+  text-align: left;
+  margin: 20px;
+  padding: 0;
+  width: 80%;
+  top: 50%;
   color: #fefefe;
 }
 
@@ -36,6 +33,7 @@ body {
 }
 
 .hero-full-screen .bottom-content-section {
+  align-items: center;
   padding: 1rem;
 }
 
@@ -71,4 +69,15 @@ body {
   font-weight: bold;
 }
 
->>>>>>> Stashed changes
+#scrollButton {
+  position: absolute;
+  bottom: 0;
+  width: 50%;
+  margin: 0;
+  padding: 0;
+right: 0;
+}
+
+#home {
+  top: 0;
+}
