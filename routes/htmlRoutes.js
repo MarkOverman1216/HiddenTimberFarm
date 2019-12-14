@@ -4,11 +4,11 @@ const db = require("../models");
 const htmlRoutes = new Router();
 
 htmlRoutes.get("/", async (req, res) => {
-  const dbExamples = await db.Example.findAll({});
+  // const dbExamples = await db.Example.findAll({});
 
   res.render("index", {
-    msg: "Welcome!",
-    examples: dbExamples
+    msg: "Welcome!"
+    // examples: dbExamples
   });
 });
 

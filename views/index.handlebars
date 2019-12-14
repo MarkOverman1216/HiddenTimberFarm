@@ -1,3 +1,40 @@
+<div class="heroPage" id="heroPage">
+  <div class="hero-full-screen">
+
+    <div id="hero-container" class="middle-content-section">
+      <div class="row" id="searchGroup">
+        <div class="row">
+          <div class="form-group">
+            <row class="disp">
+
+              <h3>Enter Name</h3>
+              <!-- This form will be where users input data about the movies -->
+              <form id="movie-form">
+                <label for="movie-input">Enter Name</label>
+                <input type="text" id="movie-input"><br>
+
+                <!-- This button will trigger our AJAX call -->
+                <!-- <input id="find-movie" type="submit" value="Movie Search">
+                                </form> -->
+
+                <!--  dumping our JSON contents in here -->
+                <div id="movie-view"></div>
+                <div id="tv-info"></div>
+
+            </row>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+</div>
+
 <div id="home">
   <div class="container">
     <div class="row">
@@ -7,11 +44,13 @@
         <form class="clearfix mb-4" action="POST">
           <div class="form-group">
             <label for="example-text">Example Text</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
+            <input type="text" id="example-text" class="form-control" aria-describedby="example-text"
+              placeholder="Enter Example Text">
           </div>
           <div class="form-group">
             <label for="example-description">Example Description</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
+            <textarea class="form-control" id="example-description" aria-describedby="example-description"
+              placeholder="Enter Example Description"></textarea>
           </div>
           <button id="submit" class="btn btn-primary float-right">Submit</button>
         </form>
@@ -28,6 +67,7 @@
     </div>
   </div>
 </div>
-
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
+<script src="/js/frontend.js"></script>
