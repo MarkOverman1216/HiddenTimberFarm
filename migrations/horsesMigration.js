@@ -22,7 +22,9 @@ module.exports = {
           stallAssignment: 1,
           quarantine: true,
           moveOutDate: null,
-          ownerID: 1
+          ownerID: 1,
+          createdAt: new Date(),
+          updatedAt: new Date()
         },
         {
           name: "Leo bar Leo",
@@ -41,7 +43,9 @@ module.exports = {
           stallAssignment: 2,
           quarantine: true,
           moveOutDate: null,
-          ownerID: 2
+          ownerID: 2,
+          createdAt: new Date(),
+          updatedAt: new Date()
         },
         {
           name: "Lilly of the Valley",
@@ -60,7 +64,9 @@ module.exports = {
           stallAssignment: 3,
           quarantine: true,
           moveOutDate: null,
-          ownerID: 2
+          ownerID: 2,
+          createdAt: new Date(),
+          updatedAt: new Date()
         },
         {
           name: "King Lear",
@@ -79,7 +85,9 @@ module.exports = {
           stallAssignment: 4,
           quarantine: true,
           moveOutDate: 1575936000,
-          ownerID: 2
+          ownerID: 2,
+          createdAt: new Date(),
+          updatedAt: new Date()
         },
         {
           name: "Secretariat",
@@ -98,7 +106,9 @@ module.exports = {
           stallAssignment: 1,
           quarantine: true,
           moveOutDate: null,
-          ownerID: 1
+          ownerID: 1,
+          createdAt: new Date(),
+          updatedAt: new Date()
         }
       ],
       {}
