@@ -1,4 +1,5 @@
 $("#home").hide();
+// $('#nav').hide();
 $("#scrollButton").hide();
 
 $("#nameButton").on("click", function() {
@@ -12,6 +13,13 @@ $("#nameButton").on("click", function() {
 });
 
 $("#sliderButton").on("click", function() {
-  $("#home").fadeIn(25ç00);
-  $(".hero-full-screen").addClass("slideOutUp animated slower").fadeOut(1500);
+  $("#home")
+    .addClass("slideInUp animated slower 1s")
+    .fadeIn(1000);
+  $(".hero-full-screen")
+    .addClass("slideOutUp animated slower")
+    .fadeOut();
+  $("#bg").addClass("heartBeat animated faster");
 });
+
+$("[data-menu-underline-from-center] a").addClass("underline-from-center");

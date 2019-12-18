@@ -3403,7 +3403,7 @@
 
 @-webkit-keyframes slideInUp {
   from {
-    -webkit-transform: translate3d(0, 100%, 0);
+    -webkit-transform: translate3d(0, 100%, 100%);
     transform: translate3d(0, 100%, 0);
     visibility: visible;
   }
