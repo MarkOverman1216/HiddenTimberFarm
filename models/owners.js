@@ -1,7 +1,7 @@
 "use strict";
 module.exports = (sequelize, DataTypes) => {
   const Owner = sequelize.define(
-    "Owner",
+    "Owners",
     {
       firstName: DataTypes.STRING,
       lastName: DataTypes.STRING,

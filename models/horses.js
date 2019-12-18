@@ -15,7 +15,6 @@ module.exports = (sequelize, DataTypes) => {
       farrier: DataTypes.STRING,
       vacDate: DataTypes.INTEGER,
       vacGiven: DataTypes.STRING,
-      trailerParking: DataTypes.BOOLEAN,
       moveInDate: DataTypes.INTEGER,
       stallAssignment: DataTypes.INTEGER,
       quarantine: DataTypes.BOOLEAN,
