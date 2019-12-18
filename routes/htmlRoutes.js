@@ -27,6 +27,10 @@ htmlRoutes.get("/example/:id", async (req, res) => {
   });
 });
 
+htmlRoutes.get("/formData", async (req, res) => {
+  res.render("dataform");
+});
+
 // Render 404 page for any unmatched routes
 htmlRoutes.get("*", async (req, res) => {
   res.render("404");
