@@ -1,5 +1,6 @@
 $("#home").hide();
 // $('#nav').hide();
+$(".dataPage").hide();
 $("#scrollButton").hide();
 
 $("#nameButton").on("click", function() {
