@@ -1,0 +1,49 @@
+<div class="container">
+    <h1>Owner Data {{msg}}</h1>
+    <form action="">
+        <label for="first"> First Name</label><br>
+        <input type="text" id="first" class="validate"><br>
+
+        <label for="last"> Last Name</label><br>
+        <input type="text" id="last" class="validate"><br>
+
+        <label for="phone"> Phone Number</label><br>
+        <input type="text" id="phone" class="validate"><br>
+
+        <label for="email"> Email</label><br>
+        <input type="text" id="email" class="validate"><br>
+
+        <label for="address"> Address</label><br>
+
+        <label for="street">Street</label><br>
+        <input type="text" id="street" class="validate"><br>
+
+        <label for="city">City</label><br>
+        <input type="text" id="city" class="validate"><br>
+
+        <label for="state">State</label><br>
+        <input type="text" id="state" class="validate"><br>
+
+        <label for="zip">Zip</label><br>
+        <input type="text" id="zip" class="validate"><br>
+
+        <label for="horse">Number Horses</label><br>
+        <input type="text" id="horse" class="validate"><br>
+
+        <label for="tp">Trailer Parking</label><br>
+        <input type="text" id="tp" class="validate"><br>
+
+        <button id="submit">Submit</button>
+    </form>
+    <ul id="owners-list" class="list-group">
+        {{#each owners}}
+        <li data-id="{{this.id}}" class="list-group-item">
+        <a href="owner/{{this.id}}">{{this.lastName}}</a>
+        <button class="btn btn-danger float-right delete">ｘ</button>
+        </li>
+        {{/each}}
+    </ul>
+    
+</div>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/owners.js"></script>
