@@ -4,11 +4,13 @@ const db = require("../models");
 const htmlRoutes = new Router();
 
 htmlRoutes.get("/", async (req, res) => {
-  // const dbExamples = await db.Example.findAll({});
+  // const dbHorses = await db.Horses.findAll({});
+  const dbOwners = await db.Owners.findAll({});
 
-  res.render("index", {
-    msg: "Welcome!"
-    // examples: dbExamples
+  res.render("owner", {
+    msg: "Welcome!",
+    // horses: dbHorses
+    owners: dbOwners
   });
 });
 

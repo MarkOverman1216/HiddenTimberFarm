@@ -1,0 +1,71 @@
+<div class="container">
+    <h1>Horse Data {{msg}}</h1>
+    <form action="">
+        <label for="name">Name</label><br>
+        <input type="text" id="name" class="validate"><br>
+
+        <label for="barn">Barn Name</label><br>
+        <input type="text" id="barn" class="validate"><br>
+
+        <label for="sex">Sex</label><br>
+        <input type="text" id="sex" class="validate"><br>
+
+        <label for="breed">Breed</label><br>
+        <input type="text" id="breed" class="validate"><br>
+
+        <label for="color">Color</label><br>
+        <input type="text" id="color" class="validate"><br>
+
+        <label for="description">Description</label><br>
+        <input type="text" id="description" class="validate"><br>
+
+        <label for="chipped">Chipped</label><br>
+        <input type="text" id="chipped" class="validate"><br>
+
+        <label for="tattooed">Tattooed</label><br>
+        <input type="text" id="tattooed" class="validate"><br>
+
+        <label for="vet">Vet</label><br>
+        <input type="text" id="vet" class="validate"><br>
+
+        <label for="farrier">Farrier</label><br>
+        <input type="text" id="farrier" class="validate"><br>
+
+        <label for="date">Vactination Date</label><br>
+        <input type="text" id="date" class="validate"><br>
+
+        <label for="type">Vactination Type</label><br>
+        <input type="text" id="type" class="validate"><br>
+
+        <label for="in">Move In Date</label><br>
+        <input type="text" id="in" class="validate"><br>
+        
+        <label for="stall">Stall Assignment</label><br>
+        <input type="text" id="stall" class="validate"><br>
+
+        <label for="quarantine">Quarantine</label><br>
+        <input type="text" id="quarantine" class="validate"><br>
+
+        <label for="out">Move Out Date</label><br>
+        <input type="text" id="out" class="validate"><br>
+
+        <label for="owner">Owner Id</label><br>
+        <input type="text" id="owner" class="validate"><br>
+
+        <button id="submit">Submit</button>
+    </form>
+
+
+    <ul id="horses-list" class="list-group">
+        {{#each horses}}
+            <li data-id="{{this.id}}" class="list-group-item">
+                <a href="horse/{{this.id}}">{{this.name}}, {{this.barnName}} </a>
+                <button class="btn btn-danger float-right delete">ｘ</button>
+            </li>
+        {{/each}}
+    </ul>
+</div>
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/horses.js"></script>
