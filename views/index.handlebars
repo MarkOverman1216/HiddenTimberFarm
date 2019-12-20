@@ -1,79 +1,158 @@
 <div class="bg" id="bg">
-<div class="hero-full-screen">
+  <div class="hero-full-screen">
 
-  {{!-- <div class="top-content-section" id="BlankSpace">
+    {{!-- <div class="top-content-section" id="BlankSpace">
     
   </div> --}}
 
-  <div class="middle-content-section center">
-    <h1 id="h1">Welcome to Hidden Timber Farm.<br> Enter Your name.</h1>
-    <input id="input"></input>
-    <button class="button large" id="nameButton">Button</button>
+    <div class="middle-content-section center">
+      <h1 id="h1">Welcome to Hidden Timber Farm.<br> Enter Your name.</h1>
+      <input id="input"></input>
+      <button class="button large" id="nameButton">Button</button>
+    </div>
+
+    <div class="bottom-content-section" id="scrollButton" data-magellan data-threshold="0">
+      <a href="#main-content-section"><svg xmlns="http://www.w3.org/2000/svg" id="sliderButton" width="24" height="24"
+          viewBox="0 0 24 24">
+          <path
+            d="M24 12c0-6.627-5.373-12-12-12s-12 5.373-12 12 5.373 12 12 12 12-5.373 12-12zm-18.005-1.568l1.415-1.414 4.59 4.574 4.579-4.574 1.416 1.414-5.995 5.988-6.005-5.988z" />
+        </svg></a>
+    </div>
+
+
+
+    <div id="main-content-section" data-magellan-target="main-content-section">
+      <!-- your content goes here -->
+    </div>
+
   </div>
 
-  <div class="bottom-content-section" id="scrollButton" data-magellan data-threshold="0">
-    <a href="#main-content-section"><svg xmlns="http://www.w3.org/2000/svg" id="sliderButton" width="24" height="24" viewBox="0 0 24 24"><path d="M24 12c0-6.627-5.373-12-12-12s-12 5.373-12 12 5.373 12 12 12 12-5.373 12-12zm-18.005-1.568l1.415-1.414 4.59 4.574 4.579-4.574 1.416 1.414-5.995 5.988-6.005-5.988z"/></svg></a>
-  </div>
-
-
-
-<div id="main-content-section" data-magellan-target="main-content-section">
-  <!-- your content goes here -->
-</div>
-
-</div>
-
-
-  <nav class="hover-underline-menu" id="nav" data-menu-underline-from-center>
-  <ul class="menu align-center">
-    <li><a href="#">One</a></li>
-    <li><a href="#">Two</a></li>
-    <li><a href="#">Three</a></li>
-    <li><a href="#">Four</a></li>
-  </ul>
-</nav>
-
-<div id="home">
-  <div class="container">
-    <div class="row">
-      <div class="col-8 offset-2">
-        <h1>{{msg}}</h1>
-        <h2>This is our Home Page!</h2>
-        <form class="clearfix mb-4" action="POST">
-          <div class="form-group">
-            <label for="example-text">Example Text</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="example-text"
-              placeholder="Enter Example Text">
+  <div class="carousel">
+    <div class="carousel__control">
+    </div>
+    <div class="carousel__stage">
+      <div class="spinner spinner--left">
+        <div class="spinner__face js-active" data-bg="#27323c">
+          <div class="content" data-type="iceland">
+            <div class="content__left">
+              <h1>ICELAND<br><span>EUROPE</span></h1>
+            </div>
+            <div class="content__right">
+              <div class="content__main">
+                <p>“As I flew north to begin my third circuit of Iceland in four years, I was slightly anxious. The
+                  number of visitors to Iceland has doubled in that period, and I feared this might mean a little less
+                  magic to go around. At the end of this trip, 6000km later, I'm thrilled to report that the magic
+                  levels remain high. It's found in glorious football victories and Viking chants, kayaking among
+                  icebergs, sitting with puffins under the midnight sun and crunching across brand-new lava fields.”
+                </p>
+                <p>– Carolyn Bain</p>
+              </div>
+              <h3 class="content__index">01</h3>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="example-description">Example Description</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description"
-              placeholder="Enter Example Description"></textarea>
+        </div>
+        <div class="spinner__face" data-bg="#19304a">
+          <div class="content" data-type="china">
+            <div class="content__left">
+              <h1>CHINA<br><span>ASIA</span></h1>
+            </div>
+            <div class="content__right">
+              <div class="content__main">
+                <p>“Its modern face is dazzling, but China is no one-trick pony. The world's oldest continuous
+                  civilisation isn't all smoked glass and brushed aluminium and while you won't be tripping over
+                  artefacts – three decades of round-the-clock development and rash town-planning have taken their toll
+                  – rich seams of antiquity await.”</p>
+                <p>– Damian Harper</p>
+              </div>
+              <h3 class="content__index">02</h3>
+            </div>
           </div>
-          <button id="submit" class="btn btn-primary float-right">Submit</button>
-        </form>
-        <h3>Examples:</h3>
-        <ul id="example-list" class="list-group">
-          {{#each examples}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
+        </div>
+        <div class="spinner__face" data-bg="#2b2533">
+          <div class="content" data-type="usa">
+            <div class="content__left">
+              <h1>USA<br><span>NORTH AMERICA</span></h1>
+            </div>
+            <div class="content__right">
+              <div class="content__main">
+                <p>“When it comes to travel, America has always floored me with its staggering range of possibilities.
+                  Not many other countries have so much natural beauty – mountains, beaches, rainforest, deserts,
+                  canyons, glaciers – coupled with fascinating cities to explore, an unrivaled music scene and all the
+                  things that make travel so rewarding (friendly locals, great restaurants and farmers markets, and
+                  plenty of quirky surprises).” </p>
+                <p>– Regis St Louis</p>
+              </div>
+              <h3 class="content__index">03</h3>
+            </div>
+          </div>
+        </div>
+        <div class="spinner__face" data-bg="#312f2d">
+          <div class="content" data-type="peru">
+            <div class="content__left">
+              <h1>PERU<br><span>SOUTH AMERICA</span></h1>
+            </div>
+            <div class="content__right">
+              <div class="content__main">
+                <p>“For me, Peru is the molten core of South America, a distillation of the oldest traditions and the
+                  finest building, weaving and art made by the most sophisticated cultures on the continent. In Peru the
+                  wildest landscapes – from frozen Andean peaks to the deep Amazon – help us re-forge our connection to
+                  the natural world. It is also a cultural stew, where diverse peoples live side by side, negotiating
+                  modern life with humor and aplomb. Beyond that, the cuisine alone makes it worth the trip. Every
+                  return is rich and surprising.”</p>
+                <p>– Carolyn McCarthy</p>
+              </div>
+              <h3 class="content__index">04</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="nav" id="nav">
+            <ul class="menu menu-hover-lines">
+              <div class= "navIn" id="navIn">
+                <ul class="menu menu-hover-lines">
+                  <li><a href="#"> Log In </a></li>
+                </ul>
+              </div>
+
+      <div class="navOut" id="navOut">
+      <ul class="menu menu-hover-lines">
+        <div class="navHome">
+        <li class=""><a href="#">Home-</a></li>
+
+        </div>
+        <div class="navService">
+        <li><a href="#">Services-  </a></li>
+
+        </div>
+        <div class="navContact">        
+        <li><a href="#">Contact-  </a></li>
+
+        </div>
+        <div class="navLogOut">
+        <li><a href="#">Log Out-</a></li>
+
+        </div>
+      </ul>
       </div>
     </div>
   </div>
+
 </div>
+
+
+
+
+<!--  Poor man's preloader -->
+<div style="height: 0; width: 0; overflow: hidden">
+  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/215059/peru.jpg">
+  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/215059/canada.jpg"><img
+    src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/215059/china.jpg"><img
+    src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/215059/usa.jpg"><img
+    src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/215059/iceland.jpg"></div>
+
+
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
 <script src="/js/frontend.js"></script>
-
-</div>
-
-
-
-
-
-
