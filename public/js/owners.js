@@ -70,7 +70,7 @@ const refreshOwners = function() {
 
 // handleFormSubmit is called whenever we submit a new owner
 // Save the new owner to the db and refresh the list
-let handleFormSubmit = function(event) {
+const handleFormSubmit = function(event) {
   event.preventDefault();
 
   let owner = {
@@ -85,22 +85,50 @@ let handleFormSubmit = function(event) {
     numHorses: $horseNum.val(),
     trailerParking: $trailerP.val()
   };
-  // function valideteForm() {
-  //   let ownerData = owner.length;
-  //   let isValid = true;
-  //   for (let i = 0; i < ownerData; i++) {
-  //     if (owner[i] === "") {
-  //       isValid = false;
-  //     }
-  //   }
-  //   return isValid;
-  // }
-  console.log(owner);
-  if (!(owner.firstName && owner.lastName)) {
-    alert("You must fill out the form");
-    return;
-  }
 
+  console.log(owner);
+  // if (!(owner.firstName && owner.lastName)) {
+  //   alert("You must fill out the form");
+  //   return;
+  // }
+  $(function() {
+    $(".validateForm").validate({
+      rules: {
+        first: "required",
+        last: "required",
+        phone: "required",
+        email: {
+          required: true,
+          email: true
+        },
+        street: "required",
+        city: "required",
+        state: "required",
+        zip: "required",
+        horse: "required",
+        tp: "required"
+      },
+      // Specify validation error messages
+      messages: {
+        first: "Please enter your name",
+        last: "Please enter your name",
+        phone: "Please enter your phone number",
+        email: "Please enter a valid email address",
+        street: "Please enter your address",
+        city: "Please enter your address",
+        state: "Please enter your address",
+        zip: "Please enter your address",
+        horse: "Please enter how many horses you have",
+        tp: "Please enter your trailer parking"
+      },
+      submitHandler: function(form) {
+        database.ref().push(newCall);
+        $("#name").val("");
+        $("#email").val("");
+        $("#message").val("");
+      }
+    });
+  });
   API.saveOwner(owner).then(function() {
     refreshOwners();
   });
