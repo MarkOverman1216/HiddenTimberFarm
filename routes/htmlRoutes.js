@@ -4,11 +4,11 @@ const db = require("../models");
 const htmlRoutes = new Router();
 
 htmlRoutes.get("/", async (req, res) => {
-  const dbExamples = await db.Example.findAll({});
+  // const dbExamples = await db.Example.findAll({});
 
   res.render("index", {
-    msg: "Welcome!",
-    examples: dbExamples
+    msg: "Welcome!"
+    // examples: dbExamples
   });
 });
 
@@ -25,6 +25,10 @@ htmlRoutes.get("/example/:id", async (req, res) => {
   res.render("example", {
     example: dbExample
   });
+});
+
+htmlRoutes.get("/formData", async (req, res) => {
+  res.render("dataform");
 });
 
 // Render 404 page for any unmatched routes
