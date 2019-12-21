@@ -183,9 +183,11 @@ $(".navLogOut").hide();
 
 $("#nameButton").on("click", function() {
   $("#scrollButton").fadeIn(5000);
+  let name = $("#input").val();
+  console.log(name);
   $("#h1")
     .fadeOut(1000)
-    .text("Hello ______ , Click below to continue")
+    .text(`Hello ${name}, Click below to continue`)
     .fadeIn(2000);
   $("#input").hide();
   $("#nameButton").hide();

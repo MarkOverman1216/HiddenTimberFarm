@@ -1,6 +1,6 @@
 <div class="container">
-    <h1>Owner Data {{msg}}</h1>
-    <form action="" class="validateForm">
+    <h1>{{msg}} Please enter your information.</h1>
+    <form class="validateForm">
         <label for="first"> First Name</label><br>
         <input type="text" id="first" name="first"><br>
 
@@ -8,12 +8,10 @@
         <input type="text" id="last" name="last"><br>
 
         <label for="phone"> Phone Number</label><br>
-        <input type="text" id="phone" name="phone"><br>
+        <input type="number" id="phone" name="phone"><br>
 
         <label for="email"> Email</label><br>
-        <input type="text" id="email" name="email"><br>
-
-        <label for="address"> Address</label><br>
+        <input type="email" id="email" name="email"><br>
 
         <label for="street">Street</label><br>
         <input type="text" id="street" name="street"><br>
@@ -28,22 +26,25 @@
         <input type="text" id="zip" name="zip"><br>
 
         <label for="horse">Number Horses</label><br>
-        <input type="text" id="horse" name=""><br>
+        <input type="text" id="horse" name="horse"><br>
 
         <label for="tp">Trailer Parking</label><br>
-        <input type="text" id="tp" name=""><br>
+        <input type="text" id="tp" name="tp"><br>
 
         <button id="submit">Submit</button>
     </form>
-    <ul id="owners-list" class="list-group">
+    {{!-- <ul id="owners-list" class="list-group">
         {{#each owners}}
         <li data-id="{{this.id}}" class="list-group-item">
         <a href="owner/{{this.id}}">{{this.lastName}}</a>
         <button class="btn btn-danger float-right delete">ｘ</button>
         </li>
         {{/each}}
-    </ul>
+    </ul> --}}
     
 </div>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js"></script>
+{{!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> --}}
 <script src="/js/owners.js"></script>
