@@ -10,6 +10,11 @@ const SPIN_BACKWARD_CLASS = "js-spin-bwd";
 const DISABLE_TRANSITIONS_CLASS = "js-transitions-disabled";
 const SPIN_DUR = 1000;
 
+// function pr() {
+//         document.getElementById("result").innerHTML = document.getElementById('fname').value + " " + 
+// document.getElementById('mname').value + " " +
+// document.getElementById('lname').value;
+
 const appendControls = () => {
   for (let i = 0; i < limit; i++) {
     $(".carousel__control").append(`<a href="#" data-index="${i}"></a>`);
@@ -183,9 +188,10 @@ $(".navLogOut").hide();
 
 $("#nameButton").on("click", function() {
   $("#scrollButton").fadeIn(5000);
+  let name = $("#input").val();
   $("#h1")
     .fadeOut(1000)
-    .text("Hello ______ , Click below to continue")
+    .text(`Hello ${name}, Click below to continue`)
     .fadeIn(2000);
   $("#input").hide();
   $("#nameButton").hide();
@@ -207,4 +213,9 @@ $("#navIn").on("click", function() {
   $(".navService").fadeIn(2000);
   $(".navContact").fadeIn(2500);
   $(".navLogOut").fadeIn(3000);
+});
+
+$(".four-slider svg").on("click", function() {
+  $("#zebraFour").hide();
+  $("#home").fadeIn(1500);
 });

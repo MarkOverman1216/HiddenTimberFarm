@@ -1,8 +1,11 @@
   
+/* The Hero/Intro Page CSS */
+
 .list-group-item {
   line-height: 2.5;
 }
 /* Intro Page CSS */
+
 
 .hero-full-screen {
   height: 100vh;
@@ -39,6 +42,12 @@
 }
 
 .hero-full-screen .bottom-content-section svg {
+  height: 3.75rem;
+  width: 3.75rem;
+  fill: #fefefe;
+}
+
+.four-slider svg {
   height: 3.75rem;
   width: 3.75rem;
   fill: #fefefe;
@@ -97,6 +106,7 @@ right: 0;
   z-index: -1;
 }
 
+/* CSS for the main section of the home page */
 
 html,
 body {
@@ -124,7 +134,8 @@ body {
   position: absolute;
   height: 160px;
   width: 40px;
-  background: #fff;
+  border: gray 1px dotted;
+  background:black;
   right: 0;
   top: 0;
   bottom: 0;
@@ -139,11 +150,11 @@ body {
   box-sizing: border-box;
 }
 .carousel__control a:hover:before {
-  background-color: rgba(0,0,0,0.4);
+  background-color: gray;
 }
 .carousel__control a.active:before,
 .carousel__control a.active:hover:before {
-  background-color: rgba(0,0,0,0.6);
+  background-color: #1779ba;
 }
 .carousel__control a:first-child {
   margin-top: 15px;
@@ -157,7 +168,7 @@ body {
   border-radius: 50%;
   padding-top: 25%;
   width: 25%;
-  background: rgba(0,0,0,0.2);
+  background: gray;
   content: '';
   display: block;
   margin-top: -12.5%;
@@ -354,6 +365,8 @@ body {
   background-image: none;
 }
 
+/* Navigation Bar */
+
 .menu-hover-lines {
   text-align: center;
   text-transform: uppercase;
@@ -418,3 +431,51 @@ body {
 .menu-hover-lines .active a::after {
   width: 100%;
 }
+
+#zebra {
+  position: relative;
+  margin: 0;
+  width: 500px;
+}
+
+#errorText{
+  color: white;
+
+}
+
+
+#zebraCage {
+text-align: center;  
+padding: 20px;
+}
+
+.card-user-profile {
+  position: relative;
+  z-index: 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 1rem;
+  border: 0;
+  border-radius: 0;
+  background: #fefefe;
+  box-shadow: none;
+  overflow: hidden;
+  color: #0a0a0a;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+.card-user-profile-name {
+  margin-bottom: 0;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+
+
+
