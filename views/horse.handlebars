@@ -1,5 +1,5 @@
 <div class="container">
-    <h1>Horse Data {{msg}}</h1>
+    <h1>Stable Manager Input Horse's Data</h1>
     <form action="">
         <label for="name">Name</label><br>
         <input type="text" id="name" class="validate"><br>
@@ -9,6 +9,7 @@
 
         <label for="sex">Sex</label><br>
         <input type="text" id="sex" class="validate"><br>
+        {{!-- radio button 3 options --}}
 
         <label for="breed">Breed</label><br>
         <input type="text" id="breed" class="validate"><br>
@@ -21,14 +22,16 @@
 
         <label for="chipped">Chipped</label><br>
         <input type="text" id="chipped" class="validate"><br>
+        {{!-- radio button yes or no --}} 
 
         <label for="tattooed">Tattooed</label><br>
         <input type="text" id="tattooed" class="validate"><br>
+        {{!-- radio button yes or no --}}
 
-        <label for="vet">Vet</label><br>
+        <label for="vet">Preferred Veterinarian</label><br>
         <input type="text" id="vet" class="validate"><br>
 
-        <label for="farrier">Farrier</label><br>
+        <label for="farrier">Preferred Farrier</label><br>
         <input type="text" id="farrier" class="validate"><br>
 
         <label for="date">Vactination Date</label><br>
@@ -48,12 +51,16 @@
 
         <label for="out">Move Out Date</label><br>
         <input type="text" id="out" class="validate"><br>
-
+        {{!-- shouldn't be required --}}
+ 
         <label for="owner">Owner Id</label><br>
         <input type="text" id="owner" class="validate"><br>
 
         <button id="submit">Submit</button>
     </form>
+
+    {{!-- stable manager is able to update and delete horse's data --}}
+    {{!-- try to show the horse's data base on owners --}}
 
 
     <ul id="horses-list" class="list-group">

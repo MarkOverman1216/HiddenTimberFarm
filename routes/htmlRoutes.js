@@ -4,12 +4,12 @@ const db = require("../models");
 const htmlRoutes = new Router();
 
 htmlRoutes.get("/", async (req, res) => {
-  // const dbHorses = await db.Horses.findAll({});
+  const dbHorses = await db.Horses.findAll({});
   // const dbOwners = await db.Owners.findAll({});
 
-  res.render("index", {
-    msg: "Welcome!"
-    // horses: dbHorses
+  res.render("horse", {
+    msg: "Welcome!",
+    horses: dbHorses
     // owners: dbOwners
   });
 });
