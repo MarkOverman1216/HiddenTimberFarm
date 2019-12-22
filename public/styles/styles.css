@@ -12,7 +12,7 @@
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background: url("/images/introbg.jpg") center center no-repeat;
+  background: url("/images/introimg.jpg") center center no-repeat;
   background-size: cover;
 }
 
@@ -84,7 +84,7 @@ right: 0;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  background: url("/images/introbg.jpg") center center no-repeat;
+  background: url("/images/introimg.jpg") center center no-repeat;
   background-color: black;
   background-size: cover;
 }
@@ -97,6 +97,9 @@ right: 0;
   z-index: -1;
 }
 
+/* #h1 {
+  font-family: oswald;
+} */
 
 html,
 body {
@@ -289,10 +292,10 @@ body {
   color: #fff;
   width: 100%;
   letter-spacing: 0.15em;
-  line-height: 0.6;
+  line-height: 0.9;
 }
 .content__left span {
-  font-size: 1vw;
+  font-size: 1.5vw;
   font-weight: 300;
   letter-spacing: 0.2em;
   opacity: 0.9;
@@ -308,18 +311,33 @@ body {
   font-family: Merriweather, serif;
   text-align: left;
   color: #fff;
-  font-size: 1.3vw;
+  font-size: 1.1vw;
   padding: 0 8vw;
   line-height: 1.65;
   font-weight: 300;
   margin: 0;
   opacity: 0.8;
 }
-.content__right .content__main p:last-child {
+
+.content__main div {
+  margin-bottom: 20px;
+}
+
+.content__main div h4 {
+  margin: 0;
+}
+
+/* .content__main p::after {
+  content: "";
+  clear: both;
+  display: table;
+} */
+
+/* .content__right .content__main p:last-child {
   text-transform: uppercase;
   letter-spacing: 0.15em;
   font-size: 0.85em;
-}
+} */
 .content__right .content__index {
   font-size: 30vh;
   position: absolute;
@@ -330,28 +348,40 @@ body {
   color: #fff;
 }
 [data-type="iceland"] .content__left {
-  background-image: url("/images/kenny-webster-QrJc1RVI7uM-unsplash.jpg");
+  background-image: url("/images/2-meeting.jpg");
 }
 .spinner--right [data-type="iceland"] .content__left {
   background-image: none;
 }
 [data-type="china"] .content__left {
-  background-image: url("/images/seth-fink-1bPXERSwOcg-unsplash.jpg");
+  background-image: url("/images/well-hello.jpg");
 }
 .spinner--right [data-type="china"] .content__left {
   background-image: none;
 }
 [data-type="usa"] .content__left {
-  background-image: url("/images/robert-thiemann-aXykEvYyRtc-unsplash.jpg");
+  background-image: url("/images/owner-amn.jpg");
 }
 .spinner--right [data-type="usa"] .content__left {
   background-image: none;
 }
 [data-type="peru"] .content__left {
-  background-image: url("/images/santiago-martin-UPkiikXMqN0-unsplash.jpg");
+  background-image: url("/images/perm-res.jpg");
 }
 .spinner--right [data-type="peru"] .content__left {
   background-image: none;
+}
+
+.spinner-thumbnail{
+  float: left;
+  margin-right: 10px;
+  width: 200px;
+  height: 150px;
+}
+
+.square {
+  width: 150px;
+  height: 150px;
 }
 
 .menu-hover-lines {
