@@ -3,7 +3,10 @@ const db = require("../models");
 
 const htmlRoutes = new Router();
 
-htmlRoutes.get("/", async (req, res) => {
+htmlRoutes.get("/", (req, res) => res.render("index"))
+
+htmlRoutes.get("/owner", async (req, res) => {
+// htmlRoutes.get("/", async (req, res) => {
   // const dbHorses = await db.Horses.findAll({});
   const dbOwners = await db.Owners.findAll({});
 
