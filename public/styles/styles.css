@@ -22,11 +22,12 @@
 
 .hero-full-screen .middle-content-section {
   text-align: left;
-  margin: 20px;
+  margin: 200px 20px 20px 0px;
   padding: 0;
-  width: 80%;
+  width: 70%;
   top: 50%;
   color: #fefefe;
+  /* background-color: rgba(26, 29, 37, 0.781); */
 }
 
 .hero-full-screen .top-content-section {
@@ -108,9 +109,16 @@ body {
   margin: 0;
 }
 body {
+  font-size: 35px;
   background: black;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
+h1, h2, #input {
+padding-left: 60px;
+}
+
+
 .js-transitions-disabled * {
   transition: none !important;
 }
@@ -380,8 +388,8 @@ body {
 }
 
 .square {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
 }
 
 .menu-hover-lines {
