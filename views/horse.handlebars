@@ -1,60 +1,61 @@
 <div class="container">
     <h1>Stable Manager Input Horse's Data</h1>
-    <form action="">
+    <form class="validateForm">
         <label for="name">Name</label><br>
-        <input type="text" id="name" class="validate"><br>
+        <input type="text" id="name" name="name"><br>
 
         <label for="barn">Barn Name</label><br>
-        <input type="text" id="barn" class="validate"><br>
+        <input type="text" id="barn" name="barn"><br>
 
         <label for="sex">Sex</label><br>
-        <input type="text" id="sex" class="validate"><br>
+        <input type="text" id="sex" name="sex"><br>
         {{!-- radio button 3 options --}}
 
         <label for="breed">Breed</label><br>
-        <input type="text" id="breed" class="validate"><br>
+        <input type="text" id="breed" name="breed"><br>
 
         <label for="color">Color</label><br>
-        <input type="text" id="color" class="validate"><br>
+        <input type="text" id="color" name="color"><br>
 
         <label for="description">Description</label><br>
-        <input type="text" id="description" class="validate"><br>
+        <input type="text" id="description" name="description"><br>
 
         <label for="chipped">Chipped</label><br>
-        <input type="text" id="chipped" class="validate"><br>
+        <input type="text" id="chipped" name="chipped"><br>
         {{!-- radio button yes or no --}} 
 
         <label for="tattooed">Tattooed</label><br>
-        <input type="text" id="tattooed" class="validate"><br>
+        <input type="text" id="tattooed" name="tattooed"><br>
         {{!-- radio button yes or no --}}
 
         <label for="vet">Preferred Veterinarian</label><br>
-        <input type="text" id="vet" class="validate"><br>
+        <input type="text" id="vet" name="vet"><br>
 
         <label for="farrier">Preferred Farrier</label><br>
-        <input type="text" id="farrier" class="validate"><br>
+        <input type="text" id="farrier" name="farrier"><br>
 
-        <label for="date">Vactination Date</label><br>
-        <input type="text" id="date" class="validate"><br>
+        <label for="date">Vaccination Date</label><br>
+        <input type="date" id="date" name="date"><br>
 
-        <label for="type">Vactination Type</label><br>
-        <input type="text" id="type" class="validate"><br>
+        <label for="type">Vaccination Type</label><br>
+        <input type="text" id="type" name="type"><br>
 
         <label for="in">Move In Date</label><br>
-        <input type="text" id="in" class="validate"><br>
+        <input type="date" id="in" name="in"><br>
         
         <label for="stall">Stall Assignment</label><br>
-        <input type="text" id="stall" class="validate"><br>
+        <input type="text" id="stall" name="stall"><br>
 
         <label for="quarantine">Quarantine</label><br>
-        <input type="text" id="quarantine" class="validate"><br>
+        <input type="text" id="quarantine" name="quarantine"><br>
+        {{!-- radio button yes or no --}}
 
         <label for="out">Move Out Date</label><br>
-        <input type="text" id="out" class="validate"><br>
+        <input type="text" id="out"><br>
         {{!-- shouldn't be required --}}
  
         <label for="owner">Owner Id</label><br>
-        <input type="text" id="owner" class="validate"><br>
+        <input type="text" id="owner" name="owner"><br>
 
         <button id="submit">Submit</button>
     </form>
@@ -63,16 +64,18 @@
     {{!-- try to show the horse's data base on owners --}}
 
 
-    <ul id="horses-list" class="list-group">
+    {{!-- <ul id="horses-list" class="list-group">
         {{#each horses}}
             <li data-id="{{this.id}}" class="list-group-item">
-                <a href="horse/{{this.id}}">{{this.name}}, {{this.barnName}} </a>
+                <a href="horse/{{this.id}}">{{this.name}}</a>
                 <button class="btn btn-danger float-right delete">ｘ</button>
             </li>
         {{/each}}
-    </ul>
+    </ul> --}}
 </div>
 
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js"></script>
+{{!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> --}}
 <script src="/js/horses.js"></script>

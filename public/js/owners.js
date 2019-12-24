@@ -42,16 +42,16 @@ $(".validateForm").validate({
   },
   // Specify validation error messages
   messages: {
-    first: "Please enter your first name",
-    last: "Please enter your last name",
-    phone: "Please enter your phone number",
-    email: "Please enter a valid email address",
-    street: "Please enter your street address",
-    city: "Please enter your city",
-    state: "Please enter your two-letter state abbreviation ",
-    zip: "Please enter your zip code",
-    horse: "Please enter how many horses you have",
-    tp: "Please enter your trailer parking"
+    first: "Enter client's first name",
+    last: "Enter client's last name",
+    phone: "Enter client's phone number",
+    email: "Enter client's valid email address",
+    street: "Enter client's street address",
+    city: "Enter client's city",
+    state: "Enter client's two-letter state abbreviation ",
+    zip: "Enter client's zip code",
+    horse: "Enter how many horses client has",
+    tp: "Enter client's trailer parking"
   },
   submitHandler(form, event) {
     event.preventDefault();
