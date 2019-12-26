@@ -185,12 +185,12 @@ $(".validateForm").validate({
   },
   submitHandler(form, event) {
     event.preventDefault();
-    const date = $outDate.val();
-    if (date === "") {
-      editedMoveOutDate: null;
-    } else {
-      editedMoveOutDate: date;
-    }
+    // const date = $outDate.val();
+    // if (date === "") {
+    //   editedMoveOutDate: null;
+    // } else {
+    //   editedMoveOutDate: date;
+    // }
     const horse = {
       name: $horseName.val(),
       barnName: $barnName.val(),
@@ -207,7 +207,7 @@ $(".validateForm").validate({
       moveInDate: $inDate.val(),
       stallAssignment: $stallAssign.val(),
       quarantine: $horseQua.val(),
-      moveOutDate: editedMoveOutDate,
+      moveOutDate: $outDate.val(),
       ownerId: $ownerId.val()
       // convert the date moment to unix time stamp
     };
