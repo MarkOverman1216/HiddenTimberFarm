@@ -32,7 +32,7 @@ input {
     font-size: medium;
     border: 1px solid grey;
 }
-#tp {
+#chipped, #quarantine, #sex, #tattooed, #tp {
    font-size: medium; 
    max-width: 375px;
    width: 100%;
