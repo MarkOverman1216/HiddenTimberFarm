@@ -5,12 +5,12 @@ const htmlRoutes = new Router();
 
 htmlRoutes.get("/", async (req, res) => {
   // const dbHorses = await db.Horses.findAll({});
-  const dbOwners = await db.Owners.findAll({});
+  // const dbOwners = await db.Owners.findAll({});
 
-  res.render("owner", {
-    msg: "Welcome!",
+  res.render("index", {
+    msg: "Welcome!"
     // horses: dbHorses
-    owners: dbOwners
+    // owners: dbOwners
   });
 });
 

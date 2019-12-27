@@ -2721,7 +2721,7 @@ textarea {
           box-sizing: border-box;
   width: 100%;
   height: 2.4375rem;
-  margin: 0;
+  margin: 0 0 1rem;
   padding: 0.5rem;
   border: 1px solid #cacaca;
   border-radius: 0;

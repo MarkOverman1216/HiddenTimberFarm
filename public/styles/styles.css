@@ -105,6 +105,7 @@ body {
   margin: 0;
 }
 body {
+  /* background: black; */
   background: white;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
@@ -417,22 +418,4 @@ body {
 .menu-hover-lines a:hover::after,
 .menu-hover-lines .active a::after {
   width: 100%;
-}
-
-
-/*  CSS for Stable Manager Owner */
-label {
-  font-size: large;
-}
-.container {
-  padding: 2.5rem;
-}
-.error {
-  font-size: medium;
-  color: red;
-}
-
-#submit {
-  border: 1px solid black;
-  padding: 8px;
 }

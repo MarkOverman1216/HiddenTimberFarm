@@ -1,40 +1,28 @@
-body {
-    font-size: larger;
-}
-
-input {
-    max-width: 350px;
-    width: 100%;
-    padding: 10px;
-    font-size: medium;
-    margin: 5px auto;
-    border: 1px solid grey;
-}
-
-/* input[type=radio] {
-    max-width: 25px;
-    width: 100%;
+/* body {
+    background: white;
 } */
 
-.container {
-    max-width: 960px;
+input, select {
+    max-width: 500px;
     width: 100%;
-    margin: 0 auto;
+    margin: 0;
 }
-
-.list-group-item {
-    line-height: 2.5;
+label {
+    font-size: large;
 }
-
-#submit {
-    margin-top: 10px;
-    padding: 10px;
+.container {
+    padding: 2.5rem;
+}
+.error {
     font-size: medium;
-    border: 1px solid grey;
+    color: red;
+    margin: 0;
+    padding: 0;
 }
-#chipped, #quarantine, #sex, #tattooed, #tp {
-   font-size: medium; 
-   max-width: 375px;
-   width: 100%;
-   height: 30px;
+.style {
+    margin-bottom: 15px;
+}
+#submit {
+    border: 1px solid black;
+    padding: 8px;
 }
