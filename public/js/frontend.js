@@ -11,7 +11,7 @@ const DISABLE_TRANSITIONS_CLASS = "js-transitions-disabled";
 const SPIN_DUR = 1000;
 
 // function pr() {
-//         document.getElementById("result").innerHTML = document.getElementById('fname').value + " " + 
+//         document.getElementById("result").innerHTML = document.getElementById('fname').value + " " +
 // document.getElementById('mname').value + " " +
 // document.getElementById('lname').value;
 
@@ -189,6 +189,7 @@ $(".navLogOut").hide();
 $("#nameButton").on("click", function() {
   $("#scrollButton").fadeIn(5000);
   let name = $("#input").val();
+  console.log(name);
   $("#h1")
     .fadeOut(1000)
     .text(`Hello ${name}, Click below to continue`)

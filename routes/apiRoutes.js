@@ -1,4 +1,5 @@
 const Router = require("express").Router;
+const db = require("../models");
 
 const dataFarm = Router();
 
@@ -7,7 +8,7 @@ dataFarm
   .route("/horses/")
 
   .get(async (_req, res) => {
-    const dbHorses = await db.Horse.findAll({});
+    const dbHorses = await db.Horses.findAll({});
     res.json(dbHorses);
   })
 
@@ -51,8 +52,8 @@ dataFarm
   })
 
   .post(async (req, res) => {
-    const dbHorses = await db.Horses.create(req.body);
-    res.json(dbHorses);
+    const dbOwners = await db.Owners.create(req.body);
+    res.json(dbOwners);
   });
 
 dataFarm.put("/owners/:id", async (req, res) => {
