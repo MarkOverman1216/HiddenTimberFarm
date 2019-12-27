@@ -71,6 +71,10 @@ sup {
 img {
   border-style: none; }
 
+input {
+  border-radius: 45px;
+}
+
 button,
 input,
 optgroup,
@@ -177,7 +181,7 @@ body {
   margin: 0;
   padding: 0;
   background: #fefefe;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Merriweather";
   font-weight: normal;
   line-height: 1.5;
   color: #0a0a0a;
@@ -2189,8 +2193,9 @@ h2, .h2,
 h3, .h3,
 h4, .h4,
 h5, .h5,
-h6, .h6 {
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+h6, .h6
+{
+  
   font-style: normal;
   font-weight: normal;
   color: inherit;
@@ -2205,36 +2210,42 @@ h6, .h6 {
     color: #cacaca; }
 
 h1, .h1 {
+  font-family: "Oswald";
   font-size: 1.5rem;
   line-height: 1.4;
   margin-top: 0;
   margin-bottom: 0.5rem; }
 
 h2, .h2 {
+  font-family: "Oswald";
   font-size: 1.25rem;
   line-height: 1.4;
   margin-top: 0;
   margin-bottom: 0.5rem; }
 
 h3, .h3 {
+  font-family: "Oswald";
   font-size: 1.1875rem;
   line-height: 1.4;
   margin-top: 0;
   margin-bottom: 0.5rem; }
 
 h4, .h4 {
+  font-family: "Oswald";
   font-size: 1.125rem;
   line-height: 1.4;
   margin-top: 0;
   margin-bottom: 0.5rem; }
 
 h5, .h5 {
+  font-family: "Oswald";
   font-size: 1.0625rem;
   line-height: 1.4;
   margin-top: 0;
   margin-bottom: 0.5rem; }
 
 h6, .h6 {
+  font-family: "Oswald";
   font-size: 1rem;
   line-height: 1.4;
   margin-top: 0;
@@ -2457,23 +2468,24 @@ ul.no-bullet, ol.no-bullet {
   display: inline-block;
   vertical-align: middle;
   margin: 0 0 1rem 0;
-  padding: 0.85em 1em;
+  padding: 0.5em 0.5em;
   border: 1px solid transparent;
-  border-radius: 0;
+  border-radius: 45px;
   -webkit-transition: background-color 0.25s ease-out, color 0.25s ease-out;
   transition: background-color 0.25s ease-out, color 0.25s ease-out;
-  font-family: inherit;
+  /* font-family: inherit; */
+  font-family: Merriweather;
   font-size: 0.9rem;
   -webkit-appearance: none;
   line-height: 1;
   text-align: center;
   cursor: pointer;
-  background-color: #1779ba;
+  background-color: #423442;
   color: #fefefe; }
   [data-whatinput='mouse'] .button {
     outline: 0; }
   .button:hover, .button:focus {
-    background-color: #14679e;
+    background-color: #33312f;
     color: #fefefe; }
   .button.tiny {
     font-size: 0.6rem; }
@@ -2487,16 +2499,16 @@ ul.no-bullet, ol.no-bullet {
     margin-right: 0;
     margin-left: 0; }
   .button.primary {
-    background-color: #1779ba;
+    background-color: #423442;
     color: #fefefe; }
     .button.primary:hover, .button.primary:focus {
-      background-color: #126195;
+      background-color: #423442;
       color: #fefefe; }
   .button.secondary {
-    background-color: #767676;
+    background-color: #423442;
     color: #fefefe; }
     .button.secondary:hover, .button.secondary:focus {
-      background-color: #5e5e5e;
+      background-color: #423442;
       color: #fefefe; }
   .button.success {
     background-color: #3adb76;
@@ -2505,7 +2517,7 @@ ul.no-bullet, ol.no-bullet {
       background-color: #22bb5b;
       color: #0a0a0a; }
   .button.warning {
-    background-color: #ffae00;
+    background-color: #423442;
     color: #0a0a0a; }
     .button.warning:hover, .button.warning:focus {
       background-color: #cc8b00;

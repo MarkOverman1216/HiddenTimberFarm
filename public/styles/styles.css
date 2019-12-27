@@ -1,8 +1,11 @@
   
+/* The Hero/Intro Page CSS */
+
 .list-group-item {
   line-height: 2.5;
 }
 /* Intro Page CSS */
+
 
 .hero-full-screen {
   height: 100vh;
@@ -12,7 +15,7 @@
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background: url("/images/introbg.jpg") center center no-repeat;
+  background: url("/images/introimg.jpg") center center no-repeat;
   background-size: cover;
 }
 
@@ -22,11 +25,12 @@
 
 .hero-full-screen .middle-content-section {
   text-align: left;
-  margin: 20px;
+  margin: 200px 20px 20px 0px;
   padding: 0;
-  width: 80%;
+  width: 70%;
   top: 50%;
   color: #fefefe;
+  /* background-color: rgba(26, 29, 37, 0.781); */
 }
 
 .hero-full-screen .top-content-section {
@@ -39,6 +43,12 @@
 }
 
 .hero-full-screen .bottom-content-section svg {
+  height: 3.75rem;
+  width: 3.75rem;
+  fill: #fefefe;
+}
+
+.four-slider svg {
   height: 3.75rem;
   width: 3.75rem;
   fill: #fefefe;
@@ -84,7 +94,7 @@ right: 0;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  background: url("/images/introbg.jpg") center center no-repeat;
+  background: url("/images/introimg.jpg") center center no-repeat;
   background-color: black;
   background-size: cover;
 }
@@ -97,6 +107,11 @@ right: 0;
   z-index: -1;
 }
 
+/* CSS for the main section of the home page */
+
+/* #h1 {
+  font-family: oswald;
+} */
 
 html,
 body {
@@ -108,7 +123,17 @@ body {
   /* background: black; */
   background: white;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+/* check */
+  font-size: 35px;
+  background: black;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
+h1, h2, #input {
+padding-left: 60px;
+}
+
+
 .js-transitions-disabled * {
   transition: none !important;
 }
@@ -125,7 +150,8 @@ body {
   position: absolute;
   height: 160px;
   width: 40px;
-  background: #fff;
+  border: gray 1px dotted;
+  background:black;
   right: 0;
   top: 0;
   bottom: 0;
@@ -140,11 +166,11 @@ body {
   box-sizing: border-box;
 }
 .carousel__control a:hover:before {
-  background-color: rgba(0,0,0,0.4);
+  background-color: gray;
 }
 .carousel__control a.active:before,
 .carousel__control a.active:hover:before {
-  background-color: rgba(0,0,0,0.6);
+  background-color: #1779ba;
 }
 .carousel__control a:first-child {
   margin-top: 15px;
@@ -158,7 +184,7 @@ body {
   border-radius: 50%;
   padding-top: 25%;
   width: 25%;
-  background: rgba(0,0,0,0.2);
+  background: gray;
   content: '';
   display: block;
   margin-top: -12.5%;
@@ -290,10 +316,10 @@ body {
   color: #fff;
   width: 100%;
   letter-spacing: 0.15em;
-  line-height: 0.6;
+  line-height: 0.9;
 }
 .content__left span {
-  font-size: 1vw;
+  font-size: 1.5vw;
   font-weight: 300;
   letter-spacing: 0.2em;
   opacity: 0.9;
@@ -309,18 +335,33 @@ body {
   font-family: Merriweather, serif;
   text-align: left;
   color: #fff;
-  font-size: 1.3vw;
+  font-size: 1.1vw;
   padding: 0 8vw;
   line-height: 1.65;
   font-weight: 300;
   margin: 0;
   opacity: 0.8;
 }
-.content__right .content__main p:last-child {
+
+.content__main div {
+  margin-bottom: 20px;
+}
+
+.content__main div h4 {
+  margin: 0;
+}
+
+/* .content__main p::after {
+  content: "";
+  clear: both;
+  display: table;
+} */
+
+/* .content__right .content__main p:last-child {
   text-transform: uppercase;
   letter-spacing: 0.15em;
   font-size: 0.85em;
-}
+} */
 .content__right .content__index {
   font-size: 30vh;
   position: absolute;
@@ -331,30 +372,41 @@ body {
   color: #fff;
 }
 [data-type="iceland"] .content__left {
-  background-image: url("/images/kenny-webster-QrJc1RVI7uM-unsplash.jpg");
+  background-image: url("/images/2-meeting.jpg");
 }
 .spinner--right [data-type="iceland"] .content__left {
   background-image: none;
 }
 [data-type="china"] .content__left {
-  background-image: url("/images/seth-fink-1bPXERSwOcg-unsplash.jpg");
+  background-image: url("/images/well-hello.jpg");
 }
 .spinner--right [data-type="china"] .content__left {
   background-image: none;
 }
 [data-type="usa"] .content__left {
-  background-image: url("/images/robert-thiemann-aXykEvYyRtc-unsplash.jpg");
+  background-image: url("/images/owner-amn.jpg");
 }
 .spinner--right [data-type="usa"] .content__left {
   background-image: none;
 }
 [data-type="peru"] .content__left {
-  background-image: url("/images/santiago-martin-UPkiikXMqN0-unsplash.jpg");
+  background-image: url("/images/perm-res.jpg");
 }
 .spinner--right [data-type="peru"] .content__left {
   background-image: none;
 }
 
+/* Navigation Bar */
+.spinner-thumbnail{
+  float: left;
+  margin-right: 10px;
+  width: 200px;
+  height: 150px;
+}
+.square {
+  width: 100px;
+  height: 100px;
+}
 .menu-hover-lines {
   text-align: center;
   text-transform: uppercase;
@@ -419,3 +471,52 @@ body {
 .menu-hover-lines .active a::after {
   width: 100%;
 }
+/* check */
+#zebra {
+  position: relative;
+  margin: 0;
+  width: 500px;
+}
+
+#errorText{
+  color: white;
+
+}
+
+
+#zebraCage {
+text-align: center;  
+padding: 20px;
+}
+
+.card-user-profile {
+  position: relative;
+  z-index: 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 1rem;
+  border: 0;
+  border-radius: 0;
+  background: #fefefe;
+  box-shadow: none;
+  overflow: hidden;
+  color: #0a0a0a;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+.card-user-profile-name {
+  margin-bottom: 0;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+
+
+
+>>>>>>> Dev
