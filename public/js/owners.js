@@ -8,7 +8,7 @@ let $cityName = $("#city");
 let $stateName = $("#state");
 let $zipNum = $("#zip");
 let $horseNum = $("#horse");
-let $trailerP = $("#tp");
+let trailerP = $(".tp:checked");
 
 // The API object contains methods for each kind of request we'll make
 const API = {
@@ -23,7 +23,6 @@ const API = {
     });
   }
 };
-
 $(".validateForm").validate({
   rules: {
     first: "required",
@@ -55,6 +54,8 @@ $(".validateForm").validate({
   },
   submitHandler(form, event) {
     event.preventDefault();
+    let choose = trailerP.val();
+    console.log(choose);
     const owner = {
       firstName: $firstName.val(),
       lastName: $lastName.val(),
@@ -64,10 +65,9 @@ $(".validateForm").validate({
       city: $cityName.val(),
       state: $stateName.val(),
       zip: $zipNum.val(),
-      horse: $horseNum.val(),
-      tp: $trailerP.val()
+      numHorses: $horseNum.val(),
+      trailerParking: choose
     };
-
     API.saveOwner(owner).then(function() {
       $firstName.val("");
       $lastName.val("");
@@ -78,7 +78,7 @@ $(".validateForm").validate({
       $stateName.val("");
       $zipNum.val("");
       $horseNum.val("");
-      $trailerP.val("");
+      // trailerP.val("");
     });
   }
 });

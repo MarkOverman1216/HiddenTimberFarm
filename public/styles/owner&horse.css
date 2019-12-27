@@ -11,6 +11,11 @@ input {
     border: 1px solid grey;
 }
 
+input[type=radio] {
+    max-width: 25px;
+    width: 100%;
+}
+
 .container {
     max-width: 960px;
     width: 100%;
