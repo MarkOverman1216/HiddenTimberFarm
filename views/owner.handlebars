@@ -28,26 +28,22 @@
         <label for="horse">Number Horses</label><br>
         <input type="number" id="horse" name="horse"><br>
 
-        {{!-- <label for="tp">Trailer Parking</label><br>
-        <input type="tex" name="tp" id="tp"><br> --}}
-        <p>Trailer Parking</p><br>
-        <input type="radio" name="tp" class="tp" value=true>Yes<br>
-        <input type="radio" name="tp" class="tp" value=false>No<br>
         {{!-- radio button yes or no --}}    
+        {{!-- <label>Trailer Parking</label><br>
+        <input type="radio" name="radio" value=true>Yes
+        <input type="radio" name="radio" value=false>No<br> --}}
+
+        <label for="tp">Trailer Parking</label><br>
+        <select name="tp" id="tp">
+            <option value=""> Select Option</option>
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+        </select> <br>
         <button id="submit">Submit</button>
     </form>
-    {{!-- <ul id="owners-list" class="list-group">
-        {{#each owners}}
-        <li data-id="{{this.id}}" class="list-group-item">
-        <a href="owner/{{this.id}}">{{this.lastName}}</a>
-        <button class="btn btn-danger float-right delete">ｘ</button>
-        </li>
-        {{/each}}
-    </ul> --}}
     
 </div>
 
 <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js"></script>
-{{!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> --}}
 <script src="/js/owners.js"></script>
