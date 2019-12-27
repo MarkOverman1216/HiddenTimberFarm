@@ -120,6 +120,10 @@ body {
   margin: 0;
 }
 body {
+  /* background: black; */
+  background: white;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+/* check */
   font-size: 35px;
   background: black;
   font-family: Georgia, 'Times New Roman', Times, serif;
@@ -467,7 +471,7 @@ padding-left: 60px;
 .menu-hover-lines .active a::after {
   width: 100%;
 }
-
+/* check */
 #zebra {
   position: relative;
   margin: 0;
@@ -511,7 +515,3 @@ padding: 20px;
   font-weight: 300;
   font-size: 1.5rem;
 }
-
-
-
-

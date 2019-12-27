@@ -1,29 +1,28 @@
-body {
-    font-size: larger;
-}
+/* body {
+    background: white;
+} */
 
-input {
-    max-width: 350px;
+input, select {
+    max-width: 500px;
     width: 100%;
-    padding: 10px;
-    font-size: medium;
-    margin: 5px auto;
-    border: 1px solid grey;
+    margin: 0;
 }
-
+label {
+    font-size: large;
+}
 .container {
-    max-width: 960px;
-    width: 100%;
-    margin: 0 auto;
+    padding: 2.5rem;
 }
-
-.list-group-item {
-    line-height: 2.5;
-}
-
-#submit {
-    margin-top: 10px;
-    padding: 10px;
+.error {
     font-size: medium;
-    border: 1px solid grey;
+    color: red;
+    margin: 0;
+    padding: 0;
+}
+.style {
+    margin-bottom: 15px;
+}
+#submit {
+    border: 1px solid black;
+    padding: 8px;
 }

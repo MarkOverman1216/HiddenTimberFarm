@@ -13,12 +13,12 @@ module.exports = (sequelize, DataTypes) => {
       tattooed: DataTypes.BOOLEAN,
       vet: DataTypes.STRING,
       farrier: DataTypes.STRING,
-      vacDate: DataTypes.INTEGER,
+      vacDate: DataTypes.DATE,
       vacGiven: DataTypes.STRING,
-      moveInDate: DataTypes.INTEGER,
+      moveInDate: DataTypes.DATE,
       stallAssignment: DataTypes.INTEGER,
       quarantine: DataTypes.BOOLEAN,
-      moveOutDate: DataTypes.INTEGER,
+      moveOutDate: DataTypes.DATE,
       ownerID: DataTypes.INTEGER
     },
     {}

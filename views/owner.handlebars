@@ -1,50 +1,59 @@
 <div class="container">
-    <h1>{{msg}} Please enter your information.</h1>
+    <h3>Stable Manager Input Owner's Data</h3>
     <form class="validateForm">
-        <label for="first"> First Name</label><br>
-        <input type="text" id="first" name="first"><br>
-
-        <label for="last"> Last Name</label><br>
-        <input type="text" id="last" name="last"><br>
-
-        <label for="phone"> Phone Number</label><br>
-        <input type="number" id="phone" name="phone"><br>
-
-        <label for="email"> Email</label><br>
-        <input type="email" id="email" name="email"><br>
-
-        <label for="street">Street</label><br>
-        <input type="text" id="street" name="street"><br>
-
-        <label for="city">City</label><br>
-        <input type="text" id="city" name="city"><br>
-
-        <label for="state">State</label><br>
-        <input type="text" id="state" name="state"><br>
-
-        <label for="zip">Zip</label><br>
-        <input type="text" id="zip" name="zip"><br>
-
-        <label for="horse">Number Horses</label><br>
-        <input type="text" id="horse" name="horse"><br>
-
-        <label for="tp">Trailer Parking</label><br>
-        <input type="text" id="tp" name="tp"><br>
-
+        <div class="style">
+            <label for="first"> First Name</label>
+            <input type="text" id="first" name="first">
+        </div>
+        <div class="style">
+            <label for="last"> Last Name</label>
+            <input type="text" id="last" name="last">
+        </div>
+        <div class="style">
+            <label for="phone"> Phone Number</label>
+            <input type="number" id="phone" name="phone">
+        </div>
+        <div class="style">
+            <label for="email"> Email</label>
+            <input type="email" id="email" name="email">
+        </div>
+        <div class="style">
+            <label for="street">Street</label>
+            <input type="text" id="street" name="street">
+        </div>
+        <div class="style">
+            <label for="city">City</label>
+            <input type="text" id="city" name="city">
+        </div>
+        <div class="style">
+            <label for="state">State</label>
+            <input type="text" id="state" name="state">
+        </div>
+        <div class="style">
+            <label for="zip">Zip</label>
+            <input type="number" id="zip" name="zip">
+        </div>
+        <div class="style">
+            <label for="horse">Number Horses</label>
+            <input type="number" id="horse" name="horse">
+        </div>
+        <div class="style">
+            <label for="tp">Trailer Parking</label>
+            <select name="tp" id="tp">
+                <option value=""> Select Option</option>
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+        </div>
+        {{!-- radio button yes or no --}}    
+        {{!-- <label>Trailer Parking</label>
+        <input type="radio" name="radio" value=true>Yes
+        <input type="radio" name="radio" value=false>No --}}
         <button id="submit">Submit</button>
     </form>
-    {{!-- <ul id="owners-list" class="list-group">
-        {{#each owners}}
-        <li data-id="{{this.id}}" class="list-group-item">
-        <a href="owner/{{this.id}}">{{this.lastName}}</a>
-        <button class="btn btn-danger float-right delete">ｘ</button>
-        </li>
-        {{/each}}
-    </ul> --}}
     
 </div>
 
 <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js"></script>
-{{!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> --}}
 <script src="/js/owners.js"></script>
