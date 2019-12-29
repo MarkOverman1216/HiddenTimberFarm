@@ -102,7 +102,7 @@ Then run "node server.js" at the command line to begin the server, and then navi
 
 
 ### Why the Project is Useful ###
-There is a need for this kind of app that serves both stable managers and clients, but that is user-friendly and not cumbersome for smaller operations. The app features public-facing pages that tout the amenities of the stable, plus a password-protected boarder view and a password-protected stable-manager view that allows for management of a database that information about clients (horse owners) and horses (the stable residents).
+There is a need for this kind of app that serves both stable managers and clients, but that is user-friendly and not cumbersome for smaller operations. The app features public-facing pages that tout the amenities of the stable, plus a password-protected boarder view and a password-protected stable-manager view that allows for management of a database that includes information about clients (horse owners) and horses (the stable residents).
 
   The app also fulfilled a project assignment for University of Kansas Coding Boot Camp, August 2019 to February 2020. It provided us with the opportunity to work with the following technologies:
 
