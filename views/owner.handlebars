@@ -1,57 +1,83 @@
 <div class="container">
-    <h3>Stable Manager Input Owner's Data</h3>
-    <form class="validateForm">
-        <div class="style">
-            <label for="first"> First Name</label>
-            <input type="text" id="first" name="first">
+    <div id="row">
+        <div id="col-1">
+            <h3>Stable Manager Input Owner's Data</h3>
+            <form class="validateForm">
+                <div class="style">
+                    <label for="first"> First Name</label>
+                    <input type="text" id="first" name="first">
+                </div>
+                <div class="style">
+                    <label for="last"> Last Name</label>
+                    <input type="text" id="last" name="last">
+                </div>
+                <div class="style">
+                    <label for="phone"> Phone Number</label>
+                    <input type="number" id="phone" name="phone">
+                </div>
+                <div class="style">
+                    <label for="email"> Email</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <div class="style">
+                    <label for="street">Street</label>
+                    <input type="text" id="street" name="street">
+                </div>
+                <div class="style">
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city">
+                </div>
+                <div class="style">
+                    <label for="state">State</label>
+                    <input type="text" id="state" name="state">
+                </div>
+                <div class="style">
+                    <label for="zip">Zip</label>
+                    <input type="number" id="zip" name="zip">
+                </div>
+                <div class="style">
+                    <label for="horse">Number Horses</label>
+                    <input type="number" id="horse" name="horse">
+                </div>
+                <div class="style">
+                    <label for="tp">Trailer Parking</label>
+                    <select name="tp" id="tp">
+                        <option value=""> Select Option</option>
+                        <option value="true">Yes</option>
+                        <option value="false">No</option>
+                    </select>
+                </div>
+                {{!-- radio button yes or no --}}    
+                {{!-- <label>Trailer Parking</label>
+                <input type="radio" name="radio" value=true>Yes
+                <input type="radio" name="radio" value=false>No --}}
+                <button id="submit">Submit</button>
+            </form>
         </div>
-        <div class="style">
-            <label for="last"> Last Name</label>
-            <input type="text" id="last" name="last">
+        <div id="col-2">
+            <h3>Owner's List</h3>
+            <table>
+                <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Update Data</th>
+                    <th>Delete Owner</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each owners}}
+                    <tr>
+                        <td>{{this.firstName}}</td>
+                        <td>{{this.lastName}}</td>
+                        <td> <a href="">Update Data</a></td>
+                        <td> <a href="">Delete Owner</a></td>
+                    </tr>
+                {{/each}}
+            </tbody>
+            </table>
         </div>
-        <div class="style">
-            <label for="phone"> Phone Number</label>
-            <input type="number" id="phone" name="phone">
-        </div>
-        <div class="style">
-            <label for="email"> Email</label>
-            <input type="email" id="email" name="email">
-        </div>
-        <div class="style">
-            <label for="street">Street</label>
-            <input type="text" id="street" name="street">
-        </div>
-        <div class="style">
-            <label for="city">City</label>
-            <input type="text" id="city" name="city">
-        </div>
-        <div class="style">
-            <label for="state">State</label>
-            <input type="text" id="state" name="state">
-        </div>
-        <div class="style">
-            <label for="zip">Zip</label>
-            <input type="number" id="zip" name="zip">
-        </div>
-        <div class="style">
-            <label for="horse">Number Horses</label>
-            <input type="number" id="horse" name="horse">
-        </div>
-        <div class="style">
-            <label for="tp">Trailer Parking</label>
-            <select name="tp" id="tp">
-                <option value=""> Select Option</option>
-                <option value="true">Yes</option>
-                <option value="false">No</option>
-            </select>
-        </div>
-        {{!-- radio button yes or no --}}    
-        {{!-- <label>Trailer Parking</label>
-        <input type="radio" name="radio" value=true>Yes
-        <input type="radio" name="radio" value=false>No --}}
-        <button id="submit">Submit</button>
-    </form>
-    
+    </div>    
 </div>
 
 <script src="https://code.jquery.com/jquery-3.1.0.js"></script>

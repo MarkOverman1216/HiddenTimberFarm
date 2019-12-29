@@ -1,115 +1,131 @@
 <div class="container">
-    <h3>Stable Manager Input Horse's Data</h3>
-    <form class="validateForm">
-        <div class="style">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name">     
+    <div id="row">
+        <div id="col-1">
+            <h3>Stable Manager Input Horse's Data</h3>
+            <form class="validateForm">
+                <div class="style">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name">     
+                </div>
+                <div class="style">
+                    <label for="barn">Barn Name</label>
+                    <input type="text" id="barn" name="barn">
+                </div>
+                <div class="style">
+                    <label for="sex">Sex</label>
+                    {{!-- <input type="text" id="sex" name="sex"> --}}
+                    {{!-- radio button --}} 
+                    <select name="sex" id="sex">
+                        <option value=""> Select Option</option>
+                        <option value="Gelding">Gelding</option>
+                        <option value="Mare">Mare</option>
+                        <option value="Stallion">Stallion</option>
+                    </select>
+                </div>
+                <div class="style">
+                    <label for="breed">Breed</label>
+                    <input type="text" id="breed" name="breed">
+                </div>
+                <div class="style">
+                    <label for="color">Color</label>
+                    <input type="text" id="color" name="color">
+                </div>
+                <div class="style">
+                    <label for="description">Description</label>
+                    <input type="text" id="description" name="description">
+                </div>
+                <div class="style">
+                    <label for="chipped">Chipped</label>
+                    {{!-- <input type="text" id="chipped" name="chipped"> --}}
+                    {{!-- radio button yes or no --}} 
+                    <select name="chipped" id="chipped">
+                        <option value=""> Select Option</option>
+                        <option value="true">Yes</option>
+                        <option value="false">No</option>
+                    </select> 
+                </div>
+                <div class="style">
+                    <label for="tattooed">Tattooed</label>
+                    {{!-- <input type="text" id="tattooed" name="tattooed"> --}}
+                    {{!-- radio button yes or no --}}
+                    <select name="tattooed" id="tattooed" class="style">
+                        <option value=""> Select Option</option>
+                        <option value="true">Yes</option>
+                        <option value="false">No</option>
+                    </select> 
+                </div>
+                <div class="style">
+                    <label for="vet">Preferred Veterinarian</label>
+                    <input type="text" id="vet" name="vet">
+                </div>
+                <div class="style">
+                    <label for="farrier">Preferred Farrier</label>
+                    <input type="text" id="farrier" name="farrier">
+                </div>
+                <div class="style">
+                    <label for="date">Vaccination Date</label>
+                    <input type="date" id="date" name="date">
+                </div>
+                <div class="style">
+                    <label for="type">Vaccination Type</label>
+                    <input type="text" id="type" name="type">
+                </div>
+                <div class="style">
+                    <label for="in">Move In Date</label>
+                    <input type="date" id="in" name="in">
+                </div>
+                <div class="style">
+                    <label for="stall">Stall Assignment</label>
+                    <input type="text" id="stall" name="stall">
+                </div>
+                <div class="style">
+                    <label for="quarantine">Quarantine</label>
+                    {{!-- <input type="text" id="quarantine" name="quarantine"> --}}
+                    {{!-- radio button yes or no --}}
+                    <select name="quarantine" id="quarantine">
+                        <option value=""> Select Option</option>
+                        <option value="true">Yes</option>
+                        <option value="false">No</option>
+                    </select> 
+                </div>
+                <div class="style">
+                    <label for="out">Move Out Date</label>
+                    <input type="date" id="out" name="out">
+                    {{!-- shouldn't be required --}}
+                </div>
+                <div class="style">
+                    <label for="owner">Owner Id</label>
+                    <input type="text" id="owner" name="owner">
+                </div>
+                <button id="submit">Submit</button>
+            </form>
         </div>
-        <div class="style">
-            <label for="barn">Barn Name</label>
-            <input type="text" id="barn" name="barn">
+        <div id="col-2">
+            <h3>Horse's List</h3>
+            <table>
+                <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Update Data</th>
+                    <th>Delete Horse</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each horses}}
+                    <tr>
+                        <td>{{this.name}}</td>
+                        <td>{{this.barnName}}</td>
+                        <td> <a href="">Update Data</a></td>
+                        <td> <a href="">Delete Horse</a></td>
+                    </tr>
+                {{/each}}
+            </tbody>
+            </table>
         </div>
-        <div class="style">
-            <label for="sex">Sex</label>
-            {{!-- <input type="text" id="sex" name="sex"> --}}
-            {{!-- radio button --}} 
-            <select name="sex" id="sex">
-                <option value=""> Select Option</option>
-                <option value="Gelding">Gelding</option>
-                <option value="Mare">Mare</option>
-                <option value="Stallion">Stallion</option>
-            </select>
-        </div>
-        <div class="style">
-            <label for="breed">Breed</label>
-            <input type="text" id="breed" name="breed">
-        </div>
-        <div class="style">
-            <label for="color">Color</label>
-            <input type="text" id="color" name="color">
-        </div>
-        <div class="style">
-            <label for="description">Description</label>
-            <input type="text" id="description" name="description">
-        </div>
-        <div class="style">
-            <label for="chipped">Chipped</label>
-            {{!-- <input type="text" id="chipped" name="chipped"> --}}
-            {{!-- radio button yes or no --}} 
-            <select name="chipped" id="chipped">
-                <option value=""> Select Option</option>
-                <option value="true">Yes</option>
-                <option value="false">No</option>
-            </select> 
-        </div>
-        <div class="style">
-            <label for="tattooed">Tattooed</label>
-            {{!-- <input type="text" id="tattooed" name="tattooed"> --}}
-            {{!-- radio button yes or no --}}
-            <select name="tattooed" id="tattooed" class="style">
-                <option value=""> Select Option</option>
-                <option value="true">Yes</option>
-                <option value="false">No</option>
-            </select> 
-        </div>
-        <div class="style">
-            <label for="vet">Preferred Veterinarian</label>
-            <input type="text" id="vet" name="vet">
-        </div>
-        <div class="style">
-            <label for="farrier">Preferred Farrier</label>
-            <input type="text" id="farrier" name="farrier">
-        </div>
-        <div class="style">
-            <label for="date">Vaccination Date</label>
-            <input type="date" id="date" name="date">
-        </div>
-        <div class="style">
-            <label for="type">Vaccination Type</label>
-            <input type="text" id="type" name="type">
-        </div>
-        <div class="style">
-            <label for="in">Move In Date</label>
-            <input type="date" id="in" name="in">
-        </div>
-        <div class="style">
-            <label for="stall">Stall Assignment</label>
-            <input type="text" id="stall" name="stall">
-        </div>
-        <div class="style">
-            <label for="quarantine">Quarantine</label>
-            {{!-- <input type="text" id="quarantine" name="quarantine"> --}}
-            {{!-- radio button yes or no --}}
-            <select name="quarantine" id="quarantine">
-                <option value=""> Select Option</option>
-                <option value="true">Yes</option>
-                <option value="false">No</option>
-            </select> 
-        </div>
-        <div class="style">
-            <label for="out">Move Out Date</label>
-            <input type="date" id="out" name="out">
-            {{!-- shouldn't be required --}}
-        </div>
-        <div class="style">
-            <label for="owner">Owner Id</label>
-            <input type="text" id="owner" name="owner">
-        </div>
-        <button id="submit">Submit</button>
-    </form>
-
+    </div>
     {{!-- stable manager is able to update and delete horse's data --}}
     {{!-- try to show the horse's data base on owners --}}
-
-
-    {{!-- <ul id="horses-list" class="list-group">
-        {{#each horses}}
-            <li data-id="{{this.id}}" class="list-group-item">
-                <a href="horse/{{this.id}}">{{this.name}}</a>
-                <button class="btn btn-danger float-right delete">ｘ</button>
-            </li>
-        {{/each}}
-    </ul> --}}
 </div>
 
 

@@ -28,20 +28,19 @@ const API = {
       url: "api/horses",
       data: JSON.stringify(horse)
     });
+  },
+  getHorses: function() {
+    return $.ajax({
+      url: "api/horses",
+      type: "GET"
+    });
+  },
+  deleteHorse: function(id) {
+    return $.ajax({
+      url: "api/horses/" + id,
+      type: "DELETE"
+    });
   }
-  // ,
-  // getHorses: function() {
-  //   return $.ajax({
-  //     url: "api/horses",
-  //     type: "GET"
-  //   });
-  // },
-  // deleteHorse: function(id) {
-  //   return $.ajax({
-  //     url: "api/horses/" + id,
-  //     type: "DELETE"
-  //   });
-  // }
 };
 
 $(".validateForm").validate({

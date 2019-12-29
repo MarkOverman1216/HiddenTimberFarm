@@ -120,18 +120,20 @@ body {
   margin: 0;
 }
 body {
-  /* background: black; */
   background: white;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-/* check */
   font-size: 35px;
-  background: black;
+  /* background: black; */
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-h1, h2, #input {
-padding-left: 60px;
+h1, h2 {
+  margin-left: 25px;
 }
+#input {
+  margin-left: 25px;
+  padding-left: 20px;
+}
+/* change padding to margin */
 
 
 .js-transitions-disabled * {
@@ -151,7 +153,8 @@ padding-left: 60px;
   height: 160px;
   width: 40px;
   border: gray 1px dotted;
-  background:black;
+  /* background:black; */
+  background:white;
   right: 0;
   top: 0;
   bottom: 0;

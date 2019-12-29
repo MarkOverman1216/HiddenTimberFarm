@@ -22,8 +22,22 @@ const API = {
       url: "api/owners",
       data: JSON.stringify(owner)
     });
+  },
+  getOwners: function() {
+    return $.ajax({
+      url: "api/owners",
+      type: "GET"
+    });
+  },
+  deleteOwner: function(id) {
+    return $.ajax({
+      url: "api/owners/" + id,
+      type: "DELETE"
+    });
   }
 };
+
+// input validation before submitting to database
 $(".validateForm").validate({
   rules: {
     first: "required",
