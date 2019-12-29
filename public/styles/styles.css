@@ -572,3 +572,7 @@ padding: 20px;
   transform: rotateY(180deg);
   padding-top: 10px;
 }
+
+#contact-us-image {
+  height: 10em;
+}

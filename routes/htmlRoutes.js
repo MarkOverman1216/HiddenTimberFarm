@@ -7,7 +7,7 @@ htmlRoutes.get("/", async (req, res) => {
   // const dbHorses = await db.Horses.findAll({});
   // const dbOwners = await db.Owners.findAll({});
 
-  res.render("horseOwnerLoginLanding", {
+  res.render("contactUs", {
     msg: "Welcome!"
     // horses: dbHorses
     // owners: dbOwners

@@ -144,12 +144,12 @@ const spinCallback = () => {
 const attachListeners = () => {
   document.onkeyup = e => {
     switch (e.keyCode) {
-      case 38:
-        spin(-1);
-        break;
+    case 38:
+      spin(-1);
+      break;
     case 40:
       spin(1);
-        break;
+      break;
     }
   };
 
