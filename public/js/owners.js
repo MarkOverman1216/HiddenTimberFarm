@@ -10,6 +10,7 @@ let $zipNum = $("#zip");
 let $horseNum = $("#horse");
 // let $trailerP = $("input[name='radio']:checked");
 let $trailerP = $("#tp");
+let $ownersList = $("tbody");
 
 // The API object contains methods for each kind of request we'll make
 const API = {
@@ -22,8 +23,22 @@ const API = {
       url: "api/owners",
       data: JSON.stringify(owner)
     });
+  },
+  getOwners: function() {
+    return $.ajax({
+      url: "api/owners",
+      type: "GET"
+    });
+  },
+  deleteOwner: function(id) {
+    return $.ajax({
+      url: "api/owners/" + id,
+      type: "DELETE"
+    });
   }
 };
+
+// input validation before submitting to database
 $(".validateForm").validate({
   rules: {
     first: "required",
@@ -81,6 +96,48 @@ $(".validateForm").validate({
       $zipNum.val("");
       $horseNum.val("");
       $trailerP.val("");
+      refreshOwners();
     });
   }
 });
+
+const refreshOwners = function() {
+  API.getOwners().then(function(data) {
+    let $owners = data.map(function(owner) {
+      let $a1 = $("<a>")
+        .text("Update Data")
+        .attr("href", "/owner/" + owner.id);
+
+      let $a2 = $("<a>")
+        .text("Delete Owner")
+        .addClass("delete");
+
+      let $td1 = $("<td>").text(owner.firstName);
+      let $td2 = $("<td>").text(owner.lastName);
+      let $td3 = $("<td>").append($a1);
+      let $td4 = $("<td>").append($a2);
+
+      let $tr = $("<tr>")
+        .attr("data-id", owner.id)
+        .append($td1, $td2, $td3, $td4);
+
+      return $tr;
+    });
+    $ownersList.empty();
+    $ownersList.append($owners);
+  });
+};
+
+// delete owner
+const deleteBtn = function() {
+  let idToDelete = $(this)
+    .parent("td")
+    .parent("tr")
+    .attr("data-id");
+
+  API.deleteOwner(idToDelete).then(function() {
+    refreshOwners();
+  });
+};
+
+$ownersList.on("click", ".delete", deleteBtn);
