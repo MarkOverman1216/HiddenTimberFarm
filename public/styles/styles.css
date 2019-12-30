@@ -522,7 +522,6 @@ padding: 20px;
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 
 #event-header {
-  /* font-family: Arial, Helvetica, sans-serif; */
   color: white;
   text-align: center;
   padding-top: 20px;
@@ -577,7 +576,7 @@ padding: 20px;
   height: 10em;
 }
 
-/* style for submit and clear buttons on Contact Us form */
+/* Style for Send and Clear buttons on Contact Us form */
 #contact-send-button {
 	width: 100px; 
   height: 60px;
@@ -593,4 +592,33 @@ padding: 20px;
 	background-color: #474E69; 
 	color: #FFF;
 	border-radius: 3px;		
+}
+
+/* Style for Contact Success page */
+#contact-success-message {
+  color: white;
+  text-align: center;
+  padding-top: 20px;
+}
+
+#contact-success-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+/* Style for Contact Failure page */
+
+#contact-failure-message {
+  color: white;
+  text-align: center;
+  padding-top: 20px;
+}
+
+#contact-failure-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }

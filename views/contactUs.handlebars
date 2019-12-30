@@ -2,38 +2,28 @@
     <img id="contact-us-image" src="/images/boarding-options.jpg" />
     <h3>Contact Hidden Timber Farm</h3>
 
-    <form class="validateForm">
-        <div class="style">
-            <label for="name">Name*</label>
-            <input type="text" id="name" placeholder="Your first and last name here" name="name">
-        </div>
-        <div class="style">
-            <label for="email">Email*</label>
-            <input type="email" id="email" placeholder="mail@sample.com" name="email">
-        </div>
-        <div class="style">
-            <label for="phone">Phone Number*</label>
-            <input type="number" id="phone" placeholder="1234567890" name="phone">
-        </div>
-        <div class="style">
-            <label for="message"> Brief Message (100 characters)*</label>
-            <maxlength="100">
-                <textarea name="message" rows="6" cols="25"
-                    placeholder="Type your message to Hidden Timber Farm here"></textarea><br />
-                </maxlength>
-        </div>
-        <h6>*Required field</h6>
+    <form class="validateForm" action="/contact" id="contact-form" method="post" role="form">
+        <fieldset>
+            <div class="style">
+                <label for="name">Name*</label>
+                <input id="name" name="name" type="text" placeholder="Your first and last name" required>
 
-        <input type="submit" id="contact-send-button" value="Send">
-        <input type="reset" id="contact-clear-button" value="Clear">
+                <label for="email">Email*</label>
+                <input id="email" name="email" type="text" placeholder="Your email" required>
+
+                <label for="phone">Phone Number*</label>
+                <input type="text" id="phone" placeholder="123-456-7890" name="phone" required>
+
+                <label for="message"> Brief Message*</label>
+                <textarea id="message" name="message" placeholder="Enter your message to Hidden Timber Farm here"
+                    rows="3" required></textarea>
+
+                <input type="submit" id="contact-send-button" value="Send">
+                <input type="reset" id="contact-clear-button" value="Clear">
+        </fieldset>
     </form>
-    <br>
+    <h6>*Required fields</h6>
 
     <h5>Please allow a few business days for us to respond. Thank you.</h5>
 
 </div>
-
-
-<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js"></script>
-<script src="/js/contactUs.js"></script>
