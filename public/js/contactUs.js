@@ -1,10 +1,9 @@
-// This is connected to the contactUs.handlebars file, but we need to have something happen when the user clicks on SUBMIT.
+// This is connected to the contactUs.handlebars file, but we need to have something happen when the user clicks on SEND.
 
 // Get references to page elements
-let $firstNameContact = $("#first");
-let $lastNameContact = $("#last");
-let $phoneNumContact = $("#phone");
+let $nameContact = $("#name");
 let $emailContact = $("#email");
+let $phoneNumContact = $("#phone");
 let $messageContact = $("#message-to-farm");
 
 // The API object contains methods for each kind of request we'll make
@@ -22,38 +21,34 @@ const API = {
 };
 $(".validateForm").validate({
   rules: {
-    first: "required",
-    last: "required",
-    phone: "required",
+    name: "required",
     email: {
       required: true,
       email: true
     },
+    phone: "required",
     message: "required"
   },
   // Specify validation error messages
   messages: {
-    first: "Please enter your first name",
-    last: "Please enter your last name",
-    phone: "Please enter your phone number",
+    name: "Please enter your first and last name",
     email: "Please enter a valid email address",
+    phone: "Please enter your phone number",
     message: "Briefly state what we can help you with"
   },
   submitHandler(form, event) {
     event.preventDefault();
 
     const contact = {
-      firstName: $firstNameContact.val(),
-      lastName: $lastNameContact.val(),
-      phone: $phoneNumContact.val(),
+      name: $nameContact.val(),
       email: $emailContact.val(),
+      phone: $phoneNumContact.val(),
       message: $messageContact.val()
     };
     API.saveContact(contact).then(function() {
-      $firstNameContact.val("");
-      $lastNameContact.val("");
-      $phoneNumContact.val("");
+      $nameContact.val("");
       $emailContact.val("");
+      $phoneNumContact.val("");
       $messageContact.val("");
     });
   }
