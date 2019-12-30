@@ -660,3 +660,13 @@ h6 {
   max-width: 40%;
   padding: 20px;
 }
+
+#contactSuccessBG {
+background: url(../images/chris-greenhow-3FjIywswHSk-unsplash.jpg)  no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: static;
+    height: 100%;
+}
