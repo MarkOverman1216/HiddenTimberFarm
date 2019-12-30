@@ -31,6 +31,9 @@ table {
     margin: 0;
     padding: 0;
 }
+.delete, .delete:hover {
+    color: red;
+}
 .style {
     margin-bottom: 15px;
 }

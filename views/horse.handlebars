@@ -113,11 +113,11 @@
             </thead>
             <tbody>
                 {{#each horses}}
-                    <tr>
+                    <tr data-id="{{this.id}}">
                         <td>{{this.name}}</td>
                         <td>{{this.barnName}}</td>
-                        <td> <a href="">Update Data</a></td>
-                        <td> <a href="">Delete Horse</a></td>
+                        <td><a href="horse/{{this.id}}">Update Data</a></td>
+                        <td><a class="delete">Delete Horse</a></td>
                     </tr>
                 {{/each}}
             </tbody>

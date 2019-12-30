@@ -65,15 +65,15 @@
                     <th>Delete Owner</th>
                 </tr>
             </thead>
-            <tbody>
-                {{#each owners}}
-                    <tr>
-                        <td>{{this.firstName}}</td>
-                        <td>{{this.lastName}}</td>
-                        <td> <a href="">Update Data</a></td>
-                        <td> <a href="">Delete Owner</a></td>
-                    </tr>
-                {{/each}}
+            <tbody class="owners-list">
+                    {{#each owners}}
+                        <tr data-id="{{this.id}}">
+                            <td>{{this.firstName}}</td>
+                            <td>{{this.lastName}}</td>
+                            <td><a href="owner/{{this.id}}">Update Data</a></td>
+                            <td><a class="delete">Delete Owner</a></td>
+                        </tr>
+                    {{/each}}
             </tbody>
             </table>
         </div>
