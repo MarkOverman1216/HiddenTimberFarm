@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" id="background">
     <div id="row">
         <div id="col-1">
             <h3>Stable Manager Input Owner's Data</h3>
@@ -51,7 +51,7 @@
                 {{!-- <label>Trailer Parking</label>
                 <input type="radio" name="radio" value=true>Yes
                 <input type="radio" name="radio" value=false>No --}}
-                <button id="submit">Submit</button>
+                <button id="submit-owner-horse">Submit</button>
             </form>
         </div>
         <div id="col-2">
@@ -65,7 +65,7 @@
                     <th>Delete Owner</th>
                 </tr>
             </thead>
-            <tbody class="owners-list">
+            <tbody>
                     {{#each owners}}
                         <tr data-id="{{this.id}}">
                             <td>{{this.firstName}}</td>

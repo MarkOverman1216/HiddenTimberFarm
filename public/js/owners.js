@@ -96,6 +96,7 @@ $(".validateForm").validate({
       $zipNum.val("");
       $horseNum.val("");
       $trailerP.val("");
+      refreshOwners();
     });
   }
 });
@@ -116,7 +117,9 @@ const refreshOwners = function() {
       let $td3 = $("<td>").append($a1);
       let $td4 = $("<td>").append($a2);
 
-      let $tr = $("<tr>").append($td1, $td2, $td3, $td4);
+      let $tr = $("<tr>")
+        .attr("data-id", owner.id)
+        .append($td1, $td2, $td3, $td4);
 
       return $tr;
     });

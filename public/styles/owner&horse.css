@@ -1,15 +1,6 @@
 * {
     box-sizing: border-box;
 }
-body {
-    /* background: white; */
-    background: url(../images/owner&horse.jpeg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    position: static;
-}
 
 input, select {
     max-width: 500px;
@@ -24,6 +15,12 @@ table {
 }
 .container {
     padding: 2.5rem;
+    background: url(../images/owner&horse.jpeg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: static;
 }
 .error {
     font-size: medium;
@@ -34,6 +31,7 @@ table {
 .delete, .delete:hover {
     color: red;
 }
+
 .style {
     margin-bottom: 15px;
 }
@@ -47,7 +45,6 @@ table {
     margin-right: 50px;
     margin-bottom: 25px;
     border-radius: 5px;
-
 }
 #col-2 {
     /* border: 1px solid green; */
@@ -59,12 +56,14 @@ table {
     padding: 2.5rem;
     border-radius: 5px;
 }
+
 #row {
     /* border: 1px solid red; */
     overflow: hidden;
 }
-#submit {
+#submit-owner-horse {
     border: 1px solid black;
     padding: 5px;
     font-size: 16px;
+    background: white;
 }
