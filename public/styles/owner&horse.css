@@ -13,15 +13,7 @@ label {
 table {
     table-layout: fixed;
 }
-#background {
-    padding: 2.5rem;
-    background: url(../images/owner&horse.jpeg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    position: static;
-}
+
 .error {
     font-size: medium;
     color: red;
@@ -30,6 +22,16 @@ table {
 }
 .delete, .delete:hover {
     color: red;
+}
+
+.owner-horse-background {
+    padding: 2.5rem;
+    background: url(../images/owner&horse.jpeg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: static;
 }
 
 .style {

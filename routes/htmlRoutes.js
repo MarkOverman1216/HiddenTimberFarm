@@ -6,15 +6,9 @@ const GMAIL_PASS = process.env.GMAIL_PASS;
 
 const htmlRoutes = new Router();
 
+// HOME PAGE
 htmlRoutes.get("/", async (req, res) => {
-  // const dbHorses = await db.Horses.findAll({});
-  // const dbOwners = await db.Owners.findAll({});
-
-  res.render("contactSuccess", {
-    msg: "Welcome!"
-    // horses: dbHorses
-    // owners: dbOwners
-  });
+  res.render("index");
 });
 
 // POST route from the Contact Us form (currently sends to JLGaumnitz's gmail address)
@@ -48,23 +42,32 @@ htmlRoutes.post("/contact", (req, res) => {
   });
 });
 
-// Load example page and pass in an example by id
-htmlRoutes.get("/example/:id", async (req, res) => {
-  const options = {
-    where: {
-      id: req.params.id
-    }
-  };
+// CONTACT US
+htmlRoutes.get("/contact", async (req, res) => {
+  res.render("contactUs");
+});
 
-  const dbExample = await db.Example.findOne(options);
+// HORSE
+htmlRoutes.get("/horse", async (req, res) => {
+  const dbHorses = await db.Horses.findAll({});
 
-  res.render("example", {
-    example: dbExample
+  res.render("horse", {
+    horses: dbHorses
   });
 });
 
-htmlRoutes.get("/formData", async (req, res) => {
-  res.render("dataform");
+// OWNER
+htmlRoutes.get("/owner", async (req, res) => {
+  const dbOwners = await db.Owners.findAll({});
+
+  res.render("owner", {
+    owners: dbOwners
+  });
+});
+
+// LANDING PAGE
+htmlRoutes.get("/ownerlogin", async (req, res) => {
+  res.render("horseOwnerLoginLanding");
 });
 
 // Render 404 page for any unmatched routes
