@@ -576,3 +576,21 @@ padding: 20px;
 #contact-us-image {
   height: 10em;
 }
+
+/* style for submit and clear buttons on Contact Us form */
+#contact-send-button {
+	width: 100px; 
+  height: 60px;
+  padding: 10px;
+	background-color: #474E69; 
+	color: #FFF;
+	border-radius: 3px;		
+}
+#contact-clear-button {
+	width: 100px; 
+	height: 60px;
+  padding: 10px;
+	background-color: #474E69; 
+	color: #FFF;
+	border-radius: 3px;		
+}
