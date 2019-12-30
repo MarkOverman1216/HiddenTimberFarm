@@ -13,7 +13,7 @@ label {
 table {
     table-layout: fixed;
 }
-.container {
+#background {
     padding: 2.5rem;
     background: url(../images/owner&horse.jpeg) no-repeat center center fixed;
     -webkit-background-size: cover;
