@@ -578,20 +578,24 @@ padding: 20px;
 
 /* Style for Send and Clear buttons on Contact Us form */
 #contact-send-button {
-	width: 100px; 
-  height: 60px;
+	width: 65px; 
+  height: 40px;
   padding: 10px;
-	background-color: #474E69; 
-	color: #FFF;
-	border-radius: 3px;		
+	background-color: rgb(119, 77, 52); 
+  color: #FFF;
+  border-color:  rgb(104, 67, 46);
+  border-radius: 3px;
+  font-size: 15px;		
 }
 #contact-clear-button {
-	width: 100px; 
-	height: 60px;
+  width: 75px; 
+  height: 40px;
   padding: 10px;
-	background-color: #474E69; 
-	color: #FFF;
-	border-radius: 3px;		
+	background-color: rgb(119, 77, 52); 
+  color: #FFF;
+  border-color:  rgb(104, 67, 46);
+  border-radius: 3px;
+  font-size: 15px;					
 }
 
 /* Style for Contact Success page */
@@ -621,4 +625,36 @@ padding: 20px;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+}
+
+#contact-head {
+  color: #fff;
+}
+
+#contact-us-form {
+  background: url(../images/chad-madden-zy-t2K5JmWE-unsplash.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: static;
+}
+
+h5 {
+  color: #fff;
+}
+
+h6 {
+  color: #fff;
+  padding-top: 10px;
+}
+
+#message {
+  max-width: 100%;
+}
+
+#contact-form {
+  background-color:#FFFFFFF0;
+  max-width: 40%;
+  padding: 20px;
 }
