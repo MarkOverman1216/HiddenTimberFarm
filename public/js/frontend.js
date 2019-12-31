@@ -10,11 +10,6 @@ const SPIN_BACKWARD_CLASS = "js-spin-bwd";
 const DISABLE_TRANSITIONS_CLASS = "js-transitions-disabled";
 const SPIN_DUR = 1000;
 
-// function pr() {
-//         document.getElementById("result").innerHTML = document.getElementById('fname').value + " " +
-// document.getElementById('mname').value + " " +
-// document.getElementById('lname').value;
-
 const appendControls = () => {
   for (let i = 0; i < limit; i++) {
     $(".carousel__control").append(`<a href="#" data-index="${i}"></a>`);
@@ -199,7 +194,7 @@ $("#nameButton").on("click", function() {
 });
 
 $("#sliderButton").on("click", function() {
-  $("#home")
+  $("#main-content-section")
     .addClass("slideInUp animated slower 1s")
     .fadeIn(1000);
   $(".hero-full-screen")
@@ -208,15 +203,11 @@ $("#sliderButton").on("click", function() {
   $("#bg").addClass("flipIn animated faster");
 });
 
-$("#navIn").on("click", function() {
-  $("#navIn").fadeOut(1000);
-  $(".navHome").fadeIn(1000);
-  $(".navService").fadeIn(2000);
-  $(".navContact").fadeIn(2500);
-  $(".navLogOut").fadeIn(3000);
-});
+setTimeout(function() {
+  $(document).ready(function() {
+    $(".four-slider-full")
+      .fadeIn(3000)
+      .addClass("flash animated slower");
+  });
+}, 1500);
 
-$(".four-slider svg").on("click", function() {
-  $("#zebraFour").hide();
-  $("#home").fadeIn(1500);
-});
