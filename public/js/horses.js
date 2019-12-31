@@ -130,9 +130,9 @@ $(".validateForm").validate({
 const refreshHorses = function() {
   API.getHorses().then(function(data) {
     let $horses = data.map(function(horse) {
-      let $a1 = $("<a>")
-        .text("Update Data")
-        .attr("href", "/horse/" + horse.id);
+      // let $a1 = $("<a>")
+      //   .text("Update Data")
+      //   .attr("href", "/horse/" + horse.id);
 
       let $a2 = $("<a>")
         .text("Delete Horse")
@@ -140,12 +140,12 @@ const refreshHorses = function() {
 
       let $td1 = $("<td>").text(horse.name);
       let $td2 = $("<td>").text(horse.barnName);
-      let $td3 = $("<td>").append($a1);
+      // let $td3 = $("<td>").append($a1);
       let $td4 = $("<td>").append($a2);
 
       let $tr = $("<tr>")
         .attr("data-id", horse.id)
-        .append($td1, $td2, $td3, $td4);
+        .append($td1, $td2, $td4);
 
       return $tr;
     });

@@ -24,7 +24,7 @@ table {
     color: red;
 }
 
-.owner-horse-background {
+.owner-horse-background, .edit-owner-page {
     padding: 2.5rem;
     background: url(../images/owner&horse.jpeg) no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -63,7 +63,7 @@ table {
     /* border: 1px solid red; */
     overflow: hidden;
 }
-#submit-owner-horse {
+#submit-owner-horse, #button-edit {
     border: 1px solid black;
     padding: 5px;
     font-size: 16px;
@@ -82,4 +82,11 @@ table {
     max-width: 180px;
     width: 100%;
     margin-top: 20px;
+}
+
+.edit-owner {
+    background: #fffffff0;
+    padding: 2.5rem;
+    border-radius: 5px;
+    width: 45%;
 }

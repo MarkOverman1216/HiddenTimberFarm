@@ -33,7 +33,7 @@ htmlRoutes.post("/contact", (req, res) => {
   };
 
   // Attempt to send the email
-  smtpTrans.sendMail(mailOpts, (error, response) => {
+  smtpTrans.sendMail(mailOpts, (error, _response) => {
     if (error) {
       res.render("contactFailure"); // Shows a page indicating failure
     } else {
@@ -61,6 +61,15 @@ htmlRoutes.get("/owner", async (req, res) => {
   const dbOwners = await db.Owners.findAll({});
 
   res.render("owner", {
+    owners: dbOwners
+  });
+});
+
+// OWNER EDIT
+htmlRoutes.get("/editOwner", async (req, res) => {
+  const dbOwners = await db.Owners.findAll({});
+
+  res.render("editOwner", {
     owners: dbOwners
   });
 });

@@ -18,6 +18,9 @@ module.exports = (sequelize, DataTypes) => {
   );
   Owner.associate = function(_models) {
     // associations can be defined here
+    // Owner.hasMany(models.Horses, {
+    //   onDelete: "cascade"
+    // });
   };
   return Owner;
 };

@@ -24,7 +24,12 @@ module.exports = (sequelize, DataTypes) => {
     {}
   );
   Horses.associate = function(_models) {
-    // associations can be defined here
+    // We're saying that a Horse should belong to an Owner
+    // Horses.belongsTo(models.Owners, {
+    //   foreignKey: {
+    //     allowNull: false
+    //   }
+    // });
   };
   return Horses;
 };

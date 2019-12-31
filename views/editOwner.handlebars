@@ -1,8 +1,9 @@
-<div class="owner-horse-background">
-    <div id="row">
-        <div id="col-1">
-            <h3>Stable Manager Input Owner Data</h3>
-            <form class="validateForm">
+<div class="edit-owner-page">
+    <div class="edit-owner">
+        <h3>Stable Manager Edit Owner Data</h3>
+        <form 
+        {{!-- class="validateForm" --}}
+        >
                 <div class="style">
                     <label for="first"> First Name</label>
                     <input type="text" id="first" name="first">
@@ -47,51 +48,10 @@
                         <option value="false">No</option>
                     </select>
                 </div>
-                {{!-- radio button yes or no --}}    
-                {{!-- <label>Trailer Parking</label>
-                <input type="radio" name="radio" value=true>Yes
-                <input type="radio" name="radio" value=false>No --}}
-                <button id="submit-owner-horse">Submit</button>
-            </form>
-        </div>
-        <div id="col-2">
-            <h3>Owners List</h3>
-            <table>
-                <thead>
-                <tr>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    {{!-- <th>Update Data</th> --}}
-                    <th>Delete Owner</th>
-                </tr>
-            </thead>
-            <tbody>
-                    {{#each owners}}
-                        <tr data-id="{{this.id}}">
-                            <td>{{this.firstName}}</td>
-                            <td>{{this.lastName}}</td>
-                            {{!-- <td><a href="owner/{{this.id}}">Update Data</a></td> --}}
-                            <td><a class="delete">Delete Owner</a></td>
-                        </tr>
-                    {{/each}}
-            </tbody>
-            </table>
-        </div>
-        <div class="nav-owner" id="nav">
-            <div class="navIn" id="navIn">
-                <div class="navOut" id="navOut">
-                    <ul class="menu menu-hover-lines">
-                        <div class="navHome">
-                            <li class=""><a href="/horse">Horses Data</a></li>
-                        </div>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div> 
+                <button id="button-edit">Submit</button>
+        </form>
+    </div>
 </div>
-
-
 
 <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js"></script>

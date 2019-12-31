@@ -104,9 +104,9 @@ $(".validateForm").validate({
 const refreshOwners = function() {
   API.getOwners().then(function(data) {
     let $owners = data.map(function(owner) {
-      let $a1 = $("<a>")
-        .text("Update Data")
-        .attr("href", "/owner/" + owner.id);
+      // let $a1 = $("<a>")
+      //   .text("Update Data")
+      //   .attr("href", "/owner/" + owner.id);
 
       let $a2 = $("<a>")
         .text("Delete Owner")
@@ -114,12 +114,12 @@ const refreshOwners = function() {
 
       let $td1 = $("<td>").text(owner.firstName);
       let $td2 = $("<td>").text(owner.lastName);
-      let $td3 = $("<td>").append($a1);
+      // let $td3 = $("<td>").append($a1);
       let $td4 = $("<td>").append($a2);
 
       let $tr = $("<tr>")
         .attr("data-id", owner.id)
-        .append($td1, $td2, $td3, $td4);
+        .append($td1, $td2, $td4);
 
       return $tr;
     });
