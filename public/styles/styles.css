@@ -405,7 +405,7 @@ h1, h2 {
 
 /* Navigation Bar */
 .spinner-thumbnail{
-  float: left;
+  float: right;
   margin-right: 10px;
   width: 200px;
   height: 150px;
@@ -453,9 +453,6 @@ h1, h2 {
   right: 0;
 }
 
-#navOut {
-  letter-spacing: 20px;
-}
 .menu-hover-lines a::before {
   top: 0;
   left: 0;
