@@ -192,7 +192,7 @@ $("#nameButton").on("click", function() {
   console.log(name);
   $("#h1")
     .fadeOut(1000)
-    .text(`Hello, ${name}! Click below to continue...`)
+    .html(`Hello, ${name}!` + "<br/>" + "Click below to continue...")
     .fadeIn(2000);
   $("#input").hide();
   $("#nameButton").hide();
