@@ -65,15 +65,6 @@ htmlRoutes.get("/owner", async (req, res) => {
   });
 });
 
-// OWNER EDIT
-htmlRoutes.get("/editOwner", async (req, res) => {
-  const dbOwners = await db.Owners.findAll({});
-
-  res.render("editOwner", {
-    owners: dbOwners
-  });
-});
-
 // LANDING PAGE
 htmlRoutes.get("/ownerlogin", async (req, res) => {
   res.render("horseOwnerLoginLanding");

@@ -59,6 +59,7 @@
             <table>
                 <thead>
                 <tr>
+                    <th>Owner Id</th>
                     <th>First Name</th>
                     <th>Last Name</th>
                     {{!-- <th>Update Data</th> --}}
@@ -68,6 +69,7 @@
             <tbody>
                     {{#each owners}}
                         <tr data-id="{{this.id}}">
+                            <td>{{this.id}}</td>
                             <td>{{this.firstName}}</td>
                             <td>{{this.lastName}}</td>
                             {{!-- <td><a href="owner/{{this.id}}">Update Data</a></td> --}}
