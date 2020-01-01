@@ -1,33 +1,216 @@
-<div id="home">
-  <div class="container">
-    <div class="row">
-      <div class="col-8 offset-2">
-        <h1>{{msg}}</h1>
-        <h2>This is our Home Page!</h2>
-        <form class="clearfix mb-4" action="POST">
-          <div class="form-group">
-            <label for="example-text">Example Text</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
+<div class="bg" id="bg">
+  <div class="hero-full-screen">
+
+
+
+    <div class="middle-content-section center">
+      <div id="h1">
+        <h1>
+          HIDDEN TIMBER FARM
+        </h1>
+        <h2>Please fill in your name:</h2>
+      </div>
+      
+      <input id="input"></input>
+      <button class="button large" id="nameButton">ENTER</button>
+    </div>
+
+    <div class="bottom-content-section" id="scrollButton" data-magellan data-threshold="0">
+      <a href="#main-content-section"><svg xmlns="http://www.w3.org/2000/svg" id="sliderButton" width="24" height="24"
+          viewBox="0 0 24 24">
+          <path
+            d="M24 12c0-6.627-5.373-12-12-12s-12 5.373-12 12 5.373 12 12 12 12-5.373 12-12zm-18.005-1.568l1.415-1.414 4.59 4.574 4.579-4.574 1.416 1.414-5.995 5.988-6.005-5.988z" />
+        </svg></a>
+    </div>
+
+
+</div>
+<div class="carousel" id="carousel">
+    <div class="carousel__control">
+    </div>
+    <div class="carousel__stage">
+      <div class="spinner spinner--left">
+        <div class="spinner__face js-active" data-bg="#27323c">
+          <div class="content" data-type="iceland">
+            <div class="content__left">
+              <h1>HIDDEN TIMBER FARM<br><span>Gardner, Kansas<br>Boarding and Trails
+                </span></h1>
+            </div>
+            <div class="content__right">
+              <div class="content__main">
+                <p>
+                  We here at Hidden Timber Farm work hard to provide a premier boarding experience for our clients and
+                  their beloved equine companions. Read on to learn about our horse boarding options and some of
+                  amenities we offer. Then give us a call at 913-123-4567, or fill out the Contact Us form. We look forward to speaking with you.
+                </p>
+              </div>
+              <h3 class="content__index">01</h3>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="example-description">Example Description</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
+        </div>
+        <div class="spinner__face" data-bg="#19304a">
+          <div class="content" data-type="china">
+            <div class="content__left">
+              <h1>BOARDING<br>OPTIONS</h1>
+            </div>
+            <div class="content__right">
+              <div class="content__main">
+
+
+                <div>
+                  <img class="spinner-thumbnail" src="/images/boarding-options.jpg" />
+                  <h4>STALL WITH RUN-OUT</h4>
+                  All our stalls are 12 x 14-feet to accommodate larger horses. Each has a run-out that allows your horse
+                  outdoor stimulation and healthy movement. Each stall has an automatic waterer, hay feeder, half grille
+                  sliding door, and high-quality, three-quarter-inch rubber floor mat. The barn aisles have rubberized
+                  flooring as well. Come visit us and we’ll show you around.
+                </div>
+
+
+                <div>
+                  <img class="spinner-thumbnail" src="/images/paolo-chiabrando-lW9gxX6rrvE-unsplash.jpg" />
+                  <h4>PASTURE ONLY</h4>
+                  We offer several mare and gelding pastures to suit horses of all temperaments. Each pasture has
+                  waterers and an appropriate number of run-in sheds and multiple hay rings during winter months. The
+                  pastures are carefully maintained and provide a nutritious mix of brome, Kentucky bluegrass,
+                  endophyte-free fescue, alfalfa, and clover. The fencing is horse-safe vinyl post and rail.
+                </div>
+              </div>
+              <h3 class="content__index">02</h3>
+            </div>
           </div>
-          <button id="submit" class="btn btn-primary float-right">Submit</button>
-        </form>
-        <h3>Examples:</h3>
-        <ul id="example-list" class="list-group">
-          {{#each examples}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
+        </div>
+        <div class="spinner__face" data-bg="#2b2533">
+          <div class="content" data-type="usa">
+            <div class="content__left">
+              <h1>OWNER<br>AMENITIES</h1>
+            </div>
+            <div class="content__right">
+              <div class="content__main">
+                {{!-- <p>
+                  <img class="spinner-thumbnail" src="/images/tack-room.jpg"/>
+                  <h4>TACK ROOM</h4>
+                  Each boarder is provided with a roomy lockable tack locker for each horse. Each locker has a saddle
+                  rack, shelving, and hooks for all your tack and grooming supplies.
+                </p> --}}
+
+                <div>
+                  <img class="spinner-thumbnail" src="/images/tack-room.jpg" />
+                  <h4>TACK ROOM</h4>
+                  Each boarder is provided with a roomy lockable tack locker for each horse. Each locker has a saddle
+                  rack, shelving, and hooks for all your tack and grooming supplies.
+                </div>
+
+                <div>
+                  <img class="spinner-thumbnail" src="/images/wash-room.jpg">
+                  <h4>WASH ROOM</h4>
+                  Our indoor wash room is well lit and features crossties, a nonslip and well-draining floor, and warm
+                  water year-round. A heater keeps you and your horse warm.
+                </div>
+
+                <div>
+                  <img class="spinner-thumbnail" src="/images/lounge-room.jpg">
+                  <h4>LOUNGE</h4>
+                  Before or after your ride on the trails throughout our wooded acres, kick back and relax in our lounge
+                  designed just for our clients. Boots allowed!
+                </div>
+              </div>
+              <h3 class="content__index">03</h3>
+            </div>
+          </div>
+        </div>
+        <div class="spinner__face" data-bg="#312f2d">
+          <div class="content" data-type="peru">
+            <div class="content__left">
+              <h1>PERMANENT RESIDENTS<br><span>At Hidden Timber Farm, we love all animals. These special ones live here
+                  year-round.</span></h1>
+            </div>
+            <div class="content__right">
+              <div class="content__main">
+
+                <div>
+                  <img class="spinner-thumbnail square" src="/images/sq-rodney.jpg">
+                  <h4>RODNEY</h4>
+                  Once a trusty bomb-proof lesson horse, 25-year-old Rodney has retired to a life of leisure. He lives
+                  in the north pasture with our older geldings. He has never been known to turn down a treat.
+                </div>
+
+                <div>
+                  <img class="spinner-thumbnail square" src="/images/sq-jack.jpg">
+                  <h4>JACK</h4>
+                  Border Collies are known for their intelligence, and Jack is no exception to that rule. He is a
+                  constant companion to our barn manager and knows all the horses, and they him. He knows tons of tricks
+                  and is always up for a game of Frisbee.
+                </div>
+
+                <div>
+                  <img class="spinner-thumbnail square" src="/images/sq-felix.jpg">
+                  <h4>FELIX</h4>
+                  Our mouse-patrolling barn cat is Felix. He’s often on the prowl and is somewhat nocturnal. But he is
+                  very friendly, when you can find him.
+                </div>
+
+                <div>
+                  <img class="spinner-thumbnail square" src="/images/sq-tucker.jpg">
+                  <h4>TUCKER</h4>
+                  What barn is complete without a mascot? Tucker is a miniature horse that came to us as a rescue, and
+                  he couldn’t be any more spoiled. He has his own stall near the tack room, but he likes to go out with
+                  the big guys. Like Rodney, he has never been known to turn down a treat.
+                </div>
+              </div>
+              <h3 class="content__index">04</h3>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+    <div class="nav" id="nav">
+      <ul class="menu menu-hover-lines">
+        <div class="navIn" id="navIn">
+          <ul class="menu menu-hover-lines">
+            <li id="contact-link"><a href="/contact"> Contact Us | </a></li>
+            <li><a href="/ownerlogin"> Log In </a></li>
+          </ul>
+        </div>
+
+        <div class="navOut" id="navOut">
+          <ul class="menu menu-hover-lines">
+            <div class="navHome">
+              <li class=""><a href="/">Home |</a></li>
+
+            </div>
+            {{!-- <div class="navService">
+              <li><a href="#">Services- </a></li>
+
+            </div> --}}
+            {{!-- <div class="navContact">
+              <li><a href="#">Contact- </a></li> --}}
+
+            </div>
+            <div class="navLogOut">
+              <li><a href="#"> Log Out</a></li>
+
+            </div>
+          </ul>
+        </div>
+    </div>
   </div>
+
 </div>
 
+
+
+
+<!--  Poor man's preloader -->
+<div style="height: 0; width: 0; overflow: hidden">
+  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/215059/peru.jpg">
+  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/215059/canada.jpg"><img
+    src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/215059/china.jpg"><img
+    src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/215059/usa.jpg"><img
+    src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/215059/iceland.jpg"></div>
+
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
+<script src="/js/frontend.js"></script>

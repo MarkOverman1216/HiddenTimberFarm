@@ -1,7 +1,706 @@
+  
+/* The Hero/Intro Page CSS */
+
 .list-group-item {
   line-height: 2.5;
 }
+/* Intro Page CSS */
 
+
+.hero-full-screen {
+  height: 100vh;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: url("/images/introimg.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+.middle-content-section.center {
+  align-self: center
+}
+
+.hero-full-screen .middle-content-section {
+  text-align: left;
+  margin: 200px 20px 20px 0px;
+  padding: 0;
+  width: 70%;
+  top: 50%;
+  color: #fefefe;
+  /* background-color: rgba(26, 29, 37, 0.781); */
+}
+
+.hero-full-screen .top-content-section {
+  width: 100%;
+}
+
+.hero-full-screen .bottom-content-section {
+  align-items: center;
+  padding: 1rem;
+}
+
+.hero-full-screen .bottom-content-section svg {
+  height: 3.75rem;
+  width: 3.75rem;
+  fill: #fefefe;
+}
+
+.four-slider svg {
+  height: 3.75rem;
+  width: 3.75rem;
+  fill: #fefefe;
+}
+
+.hero-full-screen .top-bar {
+  background: transparent;
+}
+
+.hero-full-screen .top-bar .menu {
+  background: transparent;
+}
+
+.hero-full-screen .top-bar .menu-text {
+  color: #fefefe;
+}
+
+.hero-full-screen .top-bar .menu li {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero-full-screen .top-bar .menu a {
+  color: #fefefe;
+  font-weight: bold;
+}
+
+#scrollButton {
+  position: absolute;
+  bottom: 0;
+  width: 50%;
+  margin: 0;
+  padding: 0;
+right: 0;
+}
+
+#home {
+  height: 100vh;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background: url("/images/introimg.jpg") center center no-repeat;
+  background-color: black;
+  background-size: cover;
+}
+
+#bg {
+  height: 100vh;
+  background-color: black;
+  background: url("") center center no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+/* CSS for the main section of the home page */
+
+/* #h1 {
+  font-family: oswald;
+} */
+
+html,
 body {
-  background: pink;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-size: 35px;
+  background: black;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#h1 {
+  padding-left: 25px;
+}
+
+h1, h2 {
+  padding-left: 25px;
+}
+#input {
+  margin-left: 40px;
+  width: 25%;
+  padding: 10px;
+}
+/* change padding to margin */
+
+
+.js-transitions-disabled * {
+  transition: none !important;
+}
+.carousel {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  -webkit-perspective: 50vw;
+          perspective: 50vw;
+  -webkit-perspective-origin: 50% 50%;
+          perspective-origin: 50% 50%;
+}
+.carousel__control {
+  position: absolute;
+  height: 160px;
+  width: 40px;
+  border: gray 1px dotted;
+  /* background:black; */
+  background:white;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 1;
+}
+.carousel__control a {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding-top: 75%;
+  box-sizing: border-box;
+}
+.carousel__control a:hover:before {
+  background-color: gray;
+}
+.carousel__control a.active:before,
+.carousel__control a.active:hover:before {
+  background-color: #1779ba;
+}
+.carousel__control a:first-child {
+  margin-top: 15px;
+}
+.carousel__control a:before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 50%;
+  padding-top: 25%;
+  width: 25%;
+  background: gray;
+  content: '';
+  display: block;
+  margin-top: -12.5%;
+}
+.carousel__stage {
+  position: absolute;
+  top: 20px;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  margin: auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translateZ(calc(-50vh + 20px));
+          transform: translateZ(calc(-50vh + 20px));
+}
+.spinner {
+  position: absolute;
+  width: calc(50vw - (20px));
+  height: calc(100vh - 40px);
+  top: 0;
+  left: 0;
+  right: auto;
+  bottom: 0;
+  margin: auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-transform: rotateX(0);
+          transform: rotateX(0);
+}
+.js-spin-fwd .spinner {
+  -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
+}
+.js-spin-bwd .spinner {
+  -webkit-transform: rotateX(90deg);
+          transform: rotateX(90deg);
+}
+.js-spin-fwd .spinner--right {
+  -webkit-transform: rotateX(90deg);
+          transform: rotateX(90deg);
+}
+.js-spin-bwd .spinner--right {
+  -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
+}
+.spinner--right {
+  right: 0;
+  left: auto;
+}
+.spinner__face {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.spinner__face.js-next {
+  display: block;
+  -webkit-transform: rotateX(90deg) translateZ(calc(50vh - 20px));
+          transform: rotateX(90deg) translateZ(calc(50vh - 20px));
+}
+.spinner--right .spinner__face.js-next {
+  -webkit-transform: rotateX(270deg) translateZ(calc(50vh - 20px));
+          transform: rotateX(270deg) translateZ(calc(50vh - 20px));
+}
+.js-spin-bwd .spinner__face.js-next {
+  -webkit-transform: rotateX(-90deg) translateZ(calc(50vh - 20px));
+          transform: rotateX(-90deg) translateZ(calc(50vh - 20px));
+}
+.js-spin-bwd .spinner--right .spinner__face.js-next {
+  -webkit-transform: rotateX(-270deg) translateZ(calc(50vh - 20px));
+          transform: rotateX(-270deg) translateZ(calc(50vh - 20px));
+}
+.js-active {
+  display: block;
+  -webkit-transform: translateZ(calc(50vh - 20px));
+          transform: translateZ(calc(50vh - 20px));
+}
+.content {
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  left: 0;
+}
+.spinner--right .content {
+  left: -100%;
+}
+.content__left,
+.content__right {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+}
+.content__right {
+  right: 0;
+  left: auto;
+}
+.content__left {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.content__left:after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.1);
+}
+.content__left h1 {
+  position: absolute;
+  top: 50%;
+  margin-top: -3vw;
+  text-align: center;
+  font-family: oswald;
+  font-size: 5vw;
+  height: 10vw;
+  opacity: 1;
+  color: #fff;
+  width: 100%;
+  letter-spacing: 0.15em;
+  line-height: 0.9;
+}
+.content__left span {
+  font-size: 1.5vw;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  opacity: 0.9;
+  font-family: Merriweather;
+}
+.content__right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content__right .content__main {
+  position: absolute;
+  font-family: Merriweather, serif;
+  text-align: left;
+  color: #fff;
+  font-size: 1.1vw;
+  padding: 0 8vw;
+  line-height: 1.65;
+  font-weight: 300;
+  margin: 0;
+  opacity: 0.8;
+}
+
+.content__main div {
+  margin-bottom: 20px;
+}
+
+.content__main div h4 {
+  margin: 0;
+}
+
+/* .content__main p::after {
+  content: "";
+  clear: both;
+  display: table;
+} */
+
+/* .content__right .content__main p:last-child {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.85em;
+} */
+.content__right .content__index {
+  font-size: 30vh;
+  position: absolute;
+  right: -1vh;
+  top: 35vh;
+  opacity: 0.04;
+  font-family: oswald;
+  color: #fff;
+}
+[data-type="iceland"] .content__left {
+  background-image: url("/images/2-meeting.jpg");
+}
+.spinner--right [data-type="iceland"] .content__left {
+  background-image: none;
+}
+[data-type="china"] .content__left {
+  background-image: url("/images/well-hello.jpg");
+}
+.spinner--right [data-type="china"] .content__left {
+  background-image: none;
+}
+[data-type="usa"] .content__left {
+  background-image: url("/images/owner-amn.jpg");
+}
+.spinner--right [data-type="usa"] .content__left {
+  background-image: none;
+}
+[data-type="peru"] .content__left {
+  background-image: url("/images/perm-res.jpg");
+}
+.spinner--right [data-type="peru"] .content__left {
+  background-image: none;
+}
+
+/* Navigation Bar */
+.spinner-thumbnail{
+  float: right;
+  margin-right: 10px;
+  width: 200px;
+  height: 150px;
+}
+.square {
+  width: 100px;
+  height: 100px;
+}
+.menu-hover-lines {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 2px;
+  transition: all 0.35s ease;
+}
+
+.menu-hover-lines li a {
+  padding: 0.75rem 0;
+  color: white;
+  position: relative;
+  margin-left: 1rem;
+}
+
+.menu-hover-lines li:first-child a {
+  margin-left: 0;
+}
+
+.menu-hover-lines li.active > a {
+  background-color: transparent;
+}
+
+.menu-hover-lines a:before,
+.menu-hover-lines a::after {
+  height: 3px;
+  position: absolute;
+  content: '';
+  transition: all 0.35s ease;
+  background-color: #1779ba;
+  width: 0;
+}
+
+.nav {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.menu-hover-lines a::before {
+  top: 0;
+  left: 0;
+}
+
+.menu-hover-lines a::after {
+  bottom: 0;
+  right: 0;
+}
+
+.menu-hover-lines a:hover,
+.menu-hover-lines li.active > a {
+  color: #1779ba;
+  transition: all 0.35s ease;
+}
+
+.menu-hover-lines a:hover::before,
+.menu-hover-lines .active a::before,
+.menu-hover-lines a:hover::after,
+.menu-hover-lines .active a::after {
+  width: 100%;
+}
+/* check */
+#zebra {
+  position: relative;
+  margin: 0;
+  width: 500px;
+}
+
+#errorText{
+  color: white;
+
+}
+
+
+#zebraCage {
+text-align: center;  
+padding: 20px;
+}
+
+.card-user-profile {
+  position: relative;
+  z-index: 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 1rem;
+  border: 0;
+  border-radius: 0;
+  background: #fefefe;
+  box-shadow: none;
+  overflow: hidden;
+  color: #0a0a0a;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+.card-user-profile-name {
+  margin-bottom: 0;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+/* ================================================= */
+/* Flip Card Styling for Horse Owner Log-in Landing Page */
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+
+#owner-landing-page-background {
+  background-color: #2B2533;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: static;
+  height: 100%;
+}
+
+#event-header {
+  color: white;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 100px;
+}
+
+#owner-questions-message {
+  color: white;
+  text-align: center;
+  padding-top: 60px;
+}
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid rgb(52, 44, 61);
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: rgb(36, 50, 63);
+  color: white;
+  transform: rotateY(180deg);
+  padding-top: 10px;
+}
+/* END OF OWNER LOG-IN LANDING PAGE STYLE */
+
+/* Style for Send and Clear buttons on Contact Us form */
+#contact-send-button {
+	width: 65px; 
+  height: 40px;
+  padding: 10px;
+	background-color: rgb(119, 77, 52); 
+  color: #FFF;
+  border-color:  rgb(104, 67, 46);
+  border-radius: 3px;
+  font-size: 15px;		
+}
+#contact-clear-button {
+  width: 75px; 
+  height: 40px;
+  padding: 10px;
+	background-color: rgb(119, 77, 52); 
+  color: #FFF;
+  border-color:  rgb(104, 67, 46);
+  border-radius: 3px;
+  font-size: 15px;					
+}
+
+/* Style for Contact Success page */
+
+#contact-success-message-box {
+  background: #ffffffbd;
+  width: 50%;
+  height: auto;
+  text-align:center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 10px;
+}
+
+#contact-success-message {
+  color: black;
+  text-align: center;
+  padding-top: 20px;
+}
+#contactSuccessBG {
+background: url(../images/mariana-proenca-yHSJ-hUOxs8-unsplash.jpg)  no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: static;
+    height: 100%;
+}
+/* Style for Contact Failure page */
+#contact-failure-message-box {
+  background: #ffffffbd;
+  width: 50%;
+  height: auto;
+  text-align:center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 10px;
+}
+
+#contact-failure-message {
+  color: black;
+  text-align: center;
+  padding-top: 20px;
+}
+
+#contactFailureBG {
+  background: url(../images/mariana-proenca-yHSJ-hUOxs8-unsplash.jpg)  no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      position: static;
+      height: 100%;
+  }
+
+/* Contact Us form styling starts here */
+#contact-head {
+  color: #fff;
+  /* padding-left: 20px; */
+  padding: 20px;
+}
+#contact-us-form {
+    background: url(../images/chad-madden-zy-t2K5JmWE-unsplash.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: static;
+    width: 100%;
+    height: 100%;
+    padding-left: 40px;
+}
+
+h5 {
+  color: #fff;
+}
+
+h6 {
+  color: #fff;
+  padding-top: 10px;
+}
+
+#message {
+  max-width: 100%;
+}
+
+#contact-form {
+  background-color:#FFFFFFF0;
+  max-width: 40%;
+  padding: 20px;
 }
