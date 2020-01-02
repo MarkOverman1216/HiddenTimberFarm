@@ -104,7 +104,7 @@ First, clone the GitHub repository. You will need to have installed:
     * nodemon: 2.0.2
     * sequelize: 5.21.3
 
-Before running the server.js file using node.js, you will need to run "npm install." 
+Before running the server.js file using node.js, run "npm install" to download the dependencies defined in the package.json. 
 
 Then run "node server.js" at the command line to begin the server, and then navigate to localhost:3000 in your browser to see the HTML home page and proceed from there.
 
@@ -128,6 +128,7 @@ The app also fulfilled a project assignment for University of Kansas Coding Boot
 * MySql Workbench
 * jawsDB relational database in the cloud
 * Passport JS
+* nodemailer
 * nodemon
 * dotenv
 * Favicon & App Icon Generator
