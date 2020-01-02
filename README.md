@@ -8,7 +8,7 @@ ____________
 The target for the Hidden Timber Farm Stable Management app is the small horse boarding operation needing a way to market to potential boarders, manage a horse and owner database, and communicate with existing clients.
 
 - - - -
-Heroku-deployed app: ADD LINK WHEN KNOWN
+Heroku-deployed app: https://hiddentimberfarm.herokuapp.com/
 
 GitHub repository: https://github.com/MarkOverman1216/HiddenTimberFarm
 
@@ -38,11 +38,17 @@ At the bottom of the welcome screen, click the down arrow to see the services an
 
 ![Permanent Residents Page](./images_for_README/Services_and_Amenities_Page_06.PNG)
 
-The "Contact Us" button, on the navbar at the bottom of the page, takes a user to a form that collects basic data (first and last name, phone number, email address, and a brief message). This information is emailed to the stable manager.
+The "Contact Us" button, on the navbar at the bottom of the page, takes a user to a form that collects basic data (first and last name, phone number, email address, and a brief message). This information is emailed to the stable manager. (This is currently set to send an email to a gmail account we set up for our class project.)
 
-![Contact Us Form](./images_for_README/Contact_Us_Page_07.PNG)
+![Contact Us Form](./images_for_README/Contact_Us_Page_07a.PNG)
 
-If the user clicks on the "Log In" button take a user to a login screen. ###DESCRIPTION TO COME###
+Successful submission of the form yields this screen:
+![Successful Submission of Contact Us Form](./images_for_README/Contact_Us_Page_07b.PNG)
+
+Failed submission of the form yields this screen:
+![Failed  Submission of Contact Us Form](./images_for_README/Contact_Us_Page_07c.PNG)
+
+If the user clicks on the "Log In" button, they are taken to a login screen. ###DESCRIPTION TO COME###
 
 ###IMAGE TO COME###
 
@@ -57,7 +63,7 @@ The pictures flip to reveal text about each event or appointment:
 
 <strong>If the user who logs in is the stable manager:</strong>
 
-the application opens to a form for entering data about horse owners.
+the application opens to a form for entering data about clients (horse owners).
 
 ![Owner Data Input Form](./images_for_README/Owner_Info_Input_Form_Page_09a.PNG)
 
@@ -88,11 +94,13 @@ First, clone the GitHub repository. You will need to have installed:
 
 * Node
 * And these dependencies: 
+    * body-parser": 1.19.0
     * dotenv: 8.2.0
     * express: 4.17.1
     * express-handlebars: 3.1.0
     * mysql: 2.17.1
     * mysql2: 2.0.2,
+    * nodemailer: 6.4.2
     * nodemon: 2.0.2
     * sequelize: 5.21.3
 
@@ -100,11 +108,12 @@ Before running the server.js file using node.js, you will need to run "npm insta
 
 Then run "node server.js" at the command line to begin the server, and then navigate to localhost:3000 in your browser to see the HTML home page and proceed from there.
 
+You will also need to set up and link to your own email address (we used gmail) and update an .env file with the username and password, if you wish to have the Contact Us form function.
 
 ### Why the Project is Useful ###
 There is a need for this kind of app that serves both stable managers and clients, but that is user-friendly and not cumbersome for smaller operations. This app features public-facing pages that market the amenities of the stable; a password-protected stable-manager view that allows for management of a database that contains information about clients (horse owners) and their horses; and a password-protected client view that allows existing boarders to access the stable's calendar of events
 
-  The app also fulfilled a project assignment for University of Kansas Coding Boot Camp, August 2019 to February 2020. It provided us with the opportunity to work with the following technologies:
+The app also fulfilled a project assignment for University of Kansas Coding Boot Camp, August 2019 to February 2020. It provided us with the opportunity to work with the following technologies:
 
 * HTML5
 * CSS
@@ -124,7 +133,6 @@ There is a need for this kind of app that serves both stable managers and client
 * Favicon & App Icon Generator
 * Git version-control system
 * Slack messaging platform
-* Survey Monkey
 
 Dev Dependencies also included:
 * eslint
