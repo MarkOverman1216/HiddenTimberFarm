@@ -18,19 +18,19 @@ module.exports = (sequelize, DataTypes) => {
       moveInDate: DataTypes.DATE,
       stallAssignment: DataTypes.INTEGER,
       quarantine: DataTypes.BOOLEAN,
-      moveOutDate: DataTypes.DATE
-      // ownerID: DataTypes.INTEGER
+      moveOutDate: DataTypes.DATE,
+      ownerID: DataTypes.INTEGER
     },
     {}
   );
-  Horses.associate = function(models) {
+  Horses.associate = function(_models) {
     /// We're saying that a horse should belong to an Owner
     // A horse can't be created without an Owner due to the foreign key constraint
-    Horses.belongsTo(models.Owners, {
-      foreignKey: {
-        allowNull: false
-      }
-    });
+    // Horses.belongsTo(models.Owners, {
+    //   foreignKey: {
+    //     allowNull: false
+    //   }
+    // });
   };
   return Horses;
 };
