@@ -70,6 +70,15 @@ dataFarm.put("/owners/:id", async (req, res) => {
 });
 
 dataFarm.delete("/owners/:id", async (req, res) => {
+  // Delete All horses associated with the owner
+  const findHorses = {
+    where: {
+      ownerId: req.params.id
+    }
+  };
+
+  await db.Horses.destroy(findHorses);
+
   const options = {
     where: {
       id: req.params.id
