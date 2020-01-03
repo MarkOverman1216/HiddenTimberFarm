@@ -50,10 +50,13 @@ htmlRoutes.get("/contact", async (req, res) => {
 // HORSE
 htmlRoutes.get("/horse", async (req, res) => {
   const dbHorses = await db.Horses.findAll({});
-
+  const dbOwners = await db.Owners.findAll({});
   res.render("horse", {
-    horses: dbHorses
+    horses: dbHorses,
+    owners: dbOwners
   });
+
+  console.log(dbOwners);
 });
 
 // OWNER

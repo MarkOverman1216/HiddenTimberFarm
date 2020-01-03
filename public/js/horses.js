@@ -17,6 +17,7 @@ let $horseQua = $("#quarantine");
 let $outDate = $("#out");
 let $ownerId = $("#owner");
 let $horsesList = $("tbody");
+console.log($ownerId.val());
 
 // The API object contains methods for each kind of request we'll make
 const API = {

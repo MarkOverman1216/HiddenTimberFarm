@@ -86,7 +86,13 @@
                 </div>
                 <div class="style">
                     <label for="owner">Owner Id</label>
-                    <input type="text" id="owner" name="owner">
+                    {{!-- <input type="text" id="owner" name="owner"> --}}
+                    <select name="owner" id="owner">
+                        <option value=""> Select Option</option>
+                        {{#each owners}}
+                            <option value="">{{Datavalues.id}}</option>
+                        {{/each}}
+                    </select> 
                 </div>
                 <button id="submit-owner-horse">Submit</button>
             </form>
@@ -138,3 +144,4 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js"></script>
 {{!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> --}}
 <script src="/js/horses.js"></script>
+
