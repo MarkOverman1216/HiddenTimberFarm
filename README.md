@@ -48,22 +48,22 @@ Successful submission of the form yields this screen:
 Failed submission of the form yields this screen:
 ![Failed  Submission of Contact Us Form](./images_for_README/Contact_Us_Page_07c.PNG)
 
-If the user clicks on the "Log In" button, they are taken to a login screen. ###DESCRIPTION TO COME###
+If the user clicks on the "Log In" button at the bottom of the page, they are taken to a login screen. 
+
+###DESCRIPTION TO COME###
 
 ###IMAGE TO COME###
 
-<strong>After login,</strong> the application opens to a landing page with information about events and appointments at the stable.
+<strong>After login,</strong> the application opens to a landing page with information about upcoming stable events and appointments for existing clients.
 
 ![Owner Login Landing Page](./images_for_README/Owner_Login_Landing_Page_08a.PNG)
 
 The pictures flip to reveal text about each event or appointment:
 ![Owner Login Landing Page](./images_for_README/Owner_Login_Landing_Page_08b.PNG)
 
-<strong>If the user who logs in is the stable manager:</strong>
+<strong>If the user who logs in is the stable manager,</strong> the application then opens to a form for entering data about clients (horse owners).
 
-the application then opens to a form for entering data about clients (horse owners).
-
-![Owner Data Input Form](./images_for_README/Owner_Info_Input_Form_Page_09a.PNG)
+![Owner Data Input Form](./images_for_README/Owner_Info_Input_Form_Page_09a-V2.PNG)
 
 The form includes data validation, alerting the user when a field is invalid or left blank:
 
@@ -71,14 +71,14 @@ The form includes data validation, alerting the user when a field is invalid or 
 
 The application also has a form for entering data about horses. 
 
-![Horse Data Input Form ](./images_for_README/Horse_Info_Input_Form_Page_10a.PNG)
+![Horse Data Input Form ](./images_for_README/Horse_Info_Input_Form_Page_10a-v2.PNG)
 
 This form also includes validation.
 
 ![Horse Data Input Form Validation](./images_for_README/Horse_Info_Input_Form_Page_10b.PNG)
 
 
-The forms allow the stable manager to create,update, and delete records from the database.
+These forms allow the stable manager to easily create, update, and delete records about the clients and horses in the database.
 
 And finally, this 404 page will display if the page the user requested is not found.
 
