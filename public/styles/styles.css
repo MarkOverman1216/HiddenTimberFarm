@@ -405,7 +405,7 @@ h1, h2 {
 
 /* Navigation Bar */
 .spinner-thumbnail{
-  float: left;
+  float: right;
   margin-right: 10px;
   width: 200px;
   height: 150px;
@@ -453,9 +453,6 @@ h1, h2 {
   right: 0;
 }
 
-#navOut {
-  letter-spacing: 20px;
-}
 .menu-hover-lines a::before {
   top: 0;
   left: 0;
@@ -528,17 +525,33 @@ padding: 20px;
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 
+#owner-landing-page-background {
+  background-color: #2B2533;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: static;
+  height: 100%;
+}
+
 #event-header {
   color: white;
   text-align: center;
   padding-top: 20px;
+  padding-bottom: 100px;
 }
 
+#owner-questions-message {
+  color: white;
+  text-align: center;
+  padding-top: 60px;
+}
 .flip-card {
   background-color: transparent;
   width: 300px;
   height: 200px;
-  border: 1px solid #f1f1f1;
+  border: 1px solid rgb(52, 44, 61);
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
@@ -578,10 +591,7 @@ padding: 20px;
   transform: rotateY(180deg);
   padding-top: 10px;
 }
-
-#contact-us-image {
-  height: 10em;
-}
+/* END OF OWNER LOG-IN LANDING PAGE STYLE */
 
 /* Style for Send and Clear buttons on Contact Us form */
 #contact-send-button {
@@ -606,15 +616,24 @@ padding: 20px;
 }
 
 /* Style for Contact Success page */
+
+#contact-success-message-box {
+  background: #ffffffbd;
+  width: 50%;
+  height: auto;
+  text-align:center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 10px;
+}
+
 #contact-success-message {
-  color: white;
+  color: black;
   text-align: center;
   padding-top: 20px;
 }
-
-
 #contactSuccessBG {
-background: url(../images/chris-greenhow-3FjIywswHSk-unsplash.jpg)  no-repeat center center fixed;
+background: url(../images/mariana-proenca-yHSJ-hUOxs8-unsplash.jpg)  no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -623,19 +642,31 @@ background: url(../images/chris-greenhow-3FjIywswHSk-unsplash.jpg)  no-repeat ce
     height: 100%;
 }
 /* Style for Contact Failure page */
+#contact-failure-message-box {
+  background: #ffffffbd;
+  width: 50%;
+  height: auto;
+  text-align:center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 10px;
+}
 
 #contact-failure-message {
-  color: white;
+  color: black;
   text-align: center;
   padding-top: 20px;
 }
 
-#contact-failure-image {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
+#contactFailureBG {
+  background: url(../images/mariana-proenca-yHSJ-hUOxs8-unsplash.jpg)  no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      position: static;
+      height: 100%;
+  }
 
 /* Contact Us form styling starts here */
 #contact-head {
