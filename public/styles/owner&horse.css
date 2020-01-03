@@ -71,16 +71,9 @@ table {
     background: white;
 }
 
-.nav-owner{
+.nav-owner, .nav-horse {
     float: right;
-    max-width: 270px;
-    width: 100%;
-    margin-top: 20px;
-}
-
-.nav-horse {
-    float: right;
-    max-width: 180px;
+    max-width: 500px;
     width: 100%;
     margin-top: 20px;
 }
@@ -98,4 +91,8 @@ table {
     padding: 0;
     max-width: 300px;
     width: 100%;
+}
+
+#nav-margin {
+    margin-left: 10px;
 }

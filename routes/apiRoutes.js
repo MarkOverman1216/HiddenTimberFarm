@@ -78,6 +78,7 @@ dataFarm.delete("/owners/:id", async (req, res) => {
     }
   };
   await db.Horses.destroy(findHorses);
+
   const options = {
     where: {
       id: req.params.id

@@ -24,13 +24,7 @@ module.exports = (sequelize, DataTypes) => {
     {}
   );
   Horses.associate = function(_models) {
-    /// We're saying that a horse should belong to an Owner
-    // A horse can't be created without an Owner due to the foreign key constraint
-    // Horses.belongsTo(models.Owners, {
-    //   foreignKey: {
-    //     allowNull: false
-    //   }
-    // });
+    // Associate
   };
   return Horses;
 };
