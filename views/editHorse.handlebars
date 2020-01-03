@@ -1,0 +1,109 @@
+<div class="edit-horse-page">
+    <div class="edit-horse">
+        <h3>Stable Manager Edit Horse Data</h3>
+        <h4>ID: <span id="horseId">{{horse.id}}</span></h4>
+        <form class="validateForm">
+            <div class="style">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" value={{horse.name}}>     
+            </div>
+            <div class="style">
+                <label for="barn">Barn Name</label>
+                <input type="text" id="barn" name="barn" value={{horse.barnName}}>
+            </div>
+            <div class="style">
+                    <label for="sex">Sex</label>
+                    <select name="sex" id="sex">
+                        <option value=""> Select Option</option>
+                        <option value="Gelding">Gelding</option>
+                        <option value="Mare">Mare</option>
+                        <option value="Stallion">Stallion</option>
+                    </select>
+            </div>
+            <div class="style">
+                <label for="breed">Breed</label>
+                <input type="text" id="breed" name="breed" value={{horse.breed}}>
+            </div>
+            <div class="style">
+                <label for="color">Color</label>
+                <input type="text" id="color" name="color" value={{horse.color}}>
+            </div>
+            <div class="style">
+                <label for="description">Description</label>
+                <input type="text" id="description" name="description" value={{horse.description}}>
+            </div>
+            <div class="style">
+                <label for="chipped">Chipped</label>
+                <select name="chipped" id="chipped">
+                    <option value=""> Select Option</option>
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
+                </select> 
+            </div>
+            <div class="style">
+                <label for="tattooed">Tattooed</label>
+                <select name="tattooed" id="tattooed" class="style">
+                    <option value=""> Select Option</option>
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
+                </select> 
+            </div>
+            <div class="style">
+                <label for="vet">Preferred Veterinarian</label>
+                <input type="text" id="vet" name="vet" value={{horse.vet}}>
+            </div>
+            <div class="style">
+                <label for="farrier">Preferred Farrier</label>
+                <input type="text" id="farrier" name="farrier" value={{horse.farrier}}>
+            </div>
+            <div class="style">
+                <label for="date">Vaccination Date</label>
+                <input type="date" id="date" name="date" value={{horse.vacDate}}>
+            </div>
+            <div class="style">
+                <label for="type">Vaccination Type</label>
+                <input type="text" id="type" name="type" value={{horse.vacGiven}}>
+            </div>
+            <div class="style">
+                <label for="in">Move In Date</label>
+                <input type="date" id="in" name="in" value={{horse.moveInDate}}>
+            </div>
+            <div class="style">
+                <label for="stall">Stall Assignment</label>
+                <input type="text" id="stall" name="stall" value={{horse.stallAssignment}}>
+            </div>
+            <div class="style">
+                <label for="quarantine">Quarantine</label>
+                <select name="quarantine" id="quarantine">
+                    <option value=""> Select Option</option>
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
+                </select> 
+            </div>
+            <div class="style">
+                <label for="out">Move Out Date</label>
+                <input type="date" id="out" name="out" value={{horse.moveOutDate}}>
+            </div>
+            <div class="style">
+                <label for="horse">Owner Id</label>
+                <input type="text" id="horse" name="horse" value={{horse.ownerID}}>
+            </div>
+            <button id="button-edit">Submit</button>
+        </form>
+    </div>
+    <div class="nav-edit" id="nav">
+            <div class="navIn" id="navIn">
+                <div class="navOut" id="navOut">
+                    <ul class="menu menu-hover-lines">
+                        <div class="navHome">
+                            <li class=""><a href="/horse">Horse Data</a></li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js"></script>
+<script src="/js/editHorse.js"></script>

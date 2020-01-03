@@ -21,7 +21,7 @@ dataFarm.put("/horses/:id", async (req, res) => {
   try {
     const dbHorses = await db.Horses.update(req.body, {
       where: {
-        id: req.body.id
+        id: req.params.id
       }
     });
     res.json(dbHorses);
@@ -30,7 +30,7 @@ dataFarm.put("/horses/:id", async (req, res) => {
   }
 });
 
-// Delete an example by id
+// Delete a horse by id
 dataFarm.delete("/horses/:id", async (req, res) => {
   const options = {
     where: {
@@ -57,10 +57,11 @@ dataFarm
   });
 
 dataFarm.put("/owners/:id", async (req, res) => {
+  // console.log(req);
   try {
     const dbOwners = await db.Owners.update(req.body, {
       where: {
-        id: req.body.id
+        id: req.params.id
       }
     });
     res.json(dbOwners);
@@ -70,6 +71,14 @@ dataFarm.put("/owners/:id", async (req, res) => {
 });
 
 dataFarm.delete("/owners/:id", async (req, res) => {
+  // Delete All horses associated with the owner
+  const findHorses = {
+    where: {
+      ownerId: req.params.id
+    }
+  };
+  await db.Horses.destroy(findHorses);
+
   const options = {
     where: {
       id: req.params.id

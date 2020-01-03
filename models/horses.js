@@ -24,7 +24,7 @@ module.exports = (sequelize, DataTypes) => {
     {}
   );
   Horses.associate = function(_models) {
-    // associations can be defined here
+    // Associate
   };
   return Horses;
 };
