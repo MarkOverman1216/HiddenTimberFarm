@@ -52,7 +52,7 @@ If the user clicks on the "Log In" button, they are taken to a login screen. ###
 
 ###IMAGE TO COME###
 
-<strong>If the user who logs in is a horse-owning boarding client:</strong>
+<strong>After login,</strong>
 
  the application opens to a landing page with information about events and appointments at the stable.
 
@@ -80,9 +80,9 @@ This form also includes validation.
 ![Horse Data Input Form Validation](./images_for_README/Horse_Info_Input_Form_Page_10b.PNG)
 
 
-MORE INFO AND IMAGES TO COME about the database manipulation and database display.
+The forms allow the stable manager to create,update, and delete records from the database.
 
-And finally, this 404 page displays if the page the user requested is not found.
+And finally, this 404 page will display if the page the user requested is not found.
 
 ![Horse Data Input Form Validation](./images_for_README/404_Page_11.PNG)
 
