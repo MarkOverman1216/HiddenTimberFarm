@@ -1,58 +1,68 @@
 <div class="edit-owner-page">
     <div class="edit-owner">
         <h3>Stable Manager Edit Owner Data</h3>
-        <form 
-        {{!-- class="validateForm" --}}
-        >
-                <div class="style">
-                    <label for="first"> First Name</label>
-                    <input type="text" id="first" name="first">
-                </div>
-                <div class="style">
-                    <label for="last"> Last Name</label>
-                    <input type="text" id="last" name="last">
-                </div>
-                <div class="style">
-                    <label for="phone"> Phone Number</label>
-                    <input type="number" id="phone" name="phone">
-                </div>
-                <div class="style">
-                    <label for="email"> Email</label>
-                    <input type="email" id="email" name="email">
-                </div>
-                <div class="style">
-                    <label for="street">Street</label>
-                    <input type="text" id="street" name="street">
-                </div>
-                <div class="style">
-                    <label for="city">City</label>
-                    <input type="text" id="city" name="city">
-                </div>
-                <div class="style">
-                    <label for="state">State</label>
-                    <input type="text" id="state" name="state">
-                </div>
-                <div class="style">
-                    <label for="zip">Zip</label>
-                    <input type="number" id="zip" name="zip">
-                </div>
-                <div class="style">
-                    <label for="horse">Number Horses</label>
-                    <input type="number" id="horse" name="horse">
-                </div>
-                <div class="style">
-                    <label for="tp">Trailer Parking</label>
-                    <select name="tp" id="tp">
-                        <option value=""> Select Option</option>
-                        <option value="true">Yes</option>
-                        <option value="false">No</option>
-                    </select>
-                </div>
-                <button id="button-edit">Submit</button>
+        <h4>ID: <span id="ownerId">{{owner.id}}</span></h4>
+        <form class="validateForm">
+            <div class="style">
+                <label for="first"> First Name</label>
+                <input type="text" id="first" name="first" value={{owner.firstName}}>
+            </div>
+            <div class="style">
+                <label for="last"> Last Name</label>
+                <input type="text" id="last" name="last" value={{owner.lastName}}>
+            </div>
+            <div class="style">
+                <label for="phone"> Phone Number</label>
+                <input type="number" id="phone" name="phone" value={{owner.phone}}>
+            </div>
+            <div class="style">
+                <label for="email"> Email</label>
+                <input type="email" id="email" name="email" value={{owner.email}}>
+            </div>
+            <div class="style">
+                <label for="street">Street</label>
+                <input type="text" id="street" name="street" value={{owner.street}}>
+            </div>
+            <div class="style">
+                <label for="city">City</label>
+                <input type="text" id="city" name="city" value={{owner.city}}>
+            </div>
+            <div class="style">
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" value={{owner.state}}>
+            </div>
+            <div class="style">
+                <label for="zip">Zip</label>
+                <input type="number" id="zip" name="zip" value={{owner.zip}}>
+            </div>
+            <div class="style">
+                <label for="horse">Number Horses</label>
+                <input type="number" id="horse" name="horse" value={{owner.numHorses}}>
+            </div>
+            <div class="style">
+                <label for="tp">Trailer Parking</label>
+                <select name="tp" id="tp">
+                    <option value=""> Select Option</option>
+                    <option value=1>Yes</option>
+                    <option value=0>No</option>
+                </select>
+            </div>
+            <button id="button-edit">Submit</button>
         </form>
+    </div>
+    <div class="nav-edit" id="nav">
+        <div class="navIn" id="navIn">
+            <div class="navOut" id="navOut">
+                <ul class="menu menu-hover-lines">
+                    <div class="navHome">
+                        <li class=""><a href="/owner">Owner Data</a></li>
+                    </div>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js"></script>
-<script src="/js/owners.js"></script>
+<script src="/js/editOwner.js"></script>

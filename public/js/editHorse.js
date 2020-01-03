@@ -15,31 +15,15 @@ let $inDate = $("#in");
 let $stallAssign = $("#stall");
 let $horseQua = $("#quarantine");
 let $outDate = $("#out");
-let $ownerId = $("#owner");
-let $horsesList = $("tbody");
+let $ownerId = $("#horse");
+let $horseId = $("#horseId");
 
-// The API object contains methods for each kind of request we'll make
 const API = {
-  saveHorse: function(horse) {
+  editHorse: function(formData) {
     return $.ajax({
-      headers: {
-        "Content-Type": "application/json"
-      },
-      type: "POST",
-      url: "api/horses",
-      data: JSON.stringify(horse)
-    });
-  },
-  getHorses: function() {
-    return $.ajax({
-      url: "api/horses",
-      type: "GET"
-    });
-  },
-  deleteHorse: function(id) {
-    return $.ajax({
-      url: "api/horses/" + id,
-      type: "DELETE"
+      url: "/api/horses/" + $horseId.text(),
+      type: "PUT",
+      data: { ...formData }
     });
   }
 };
@@ -62,7 +46,7 @@ $(".validateForm").validate({
     stall: "required",
     quarantine: "required",
     out: "required",
-    owner: "required"
+    horse: "required"
   },
   // Specify validation error messages
   messages: {
@@ -82,7 +66,7 @@ $(".validateForm").validate({
     stall: "Enter stall assignment",
     quarantine: "Choose one",
     out: "Enter move out date",
-    owner: "Enter owner id"
+    horse: "Enter owner id"
   },
   submitHandler(form, event) {
     event.preventDefault();
@@ -103,9 +87,10 @@ $(".validateForm").validate({
       stallAssignment: $stallAssign.val(),
       quarantine: $horseQua.val(),
       moveOutDate: $outDate.val(),
-      ownerId: $ownerId.val()
+      ownerID: $ownerId.val()
     };
-    API.saveHorse(horse).then(function() {
+    API.editHorse(horse).then(function() {
+      $horseName.val("");
       $barnName.val("");
       $horseSex.val("");
       $horseBreed.val("");
@@ -122,49 +107,6 @@ $(".validateForm").validate({
       $horseQua.val("");
       $outDate.val("");
       $ownerId.val("");
-      refreshHorses();
     });
   }
 });
-
-const refreshHorses = function() {
-  API.getHorses().then(function(data) {
-    let $horses = data.map(function(horse) {
-      let $a1 = $("<a>")
-        .text("Update Data")
-        .attr("href", "/horse/" + horse.id);
-
-      let $a2 = $("<a>")
-        .text("Delete Horse")
-        .addClass("delete");
-
-      // let $td1 = $("<td>").text($ownerId.id);
-      let $td2 = $("<td>").text(horse.name);
-      let $td3 = $("<td>").text(horse.barnName);
-      let $td4 = $("<td>").append($a1);
-      let $td5 = $("<td>").append($a2);
-
-      let $tr = $("<tr>")
-        .attr("data-id", horse.id)
-        .append($td2, $td3, $td4, $td5);
-
-      return $tr;
-    });
-    $horsesList.empty();
-    $horsesList.append($horses);
-  });
-};
-
-// delete owner
-const deleteBtn = function() {
-  let idToDelete = $(this)
-    .parent("td")
-    .parent("tr")
-    .attr("data-id");
-
-  API.deleteHorse(idToDelete).then(function() {
-    refreshHorses();
-  });
-};
-
-$horsesList.on("click", ".delete", deleteBtn);

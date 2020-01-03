@@ -105,18 +105,20 @@
             <table>
                 <thead>
                 <tr>
+                    {{!-- <th>Owner Id</th> --}}
                     <th>First Name</th>
                     <th>Last Name</th>
-                    {{!-- <th>Update Data</th> --}}
+                    <th>Update Data</th>
                     <th>Delete Horse</th>
                 </tr>
             </thead>
             <tbody>
                 {{#each horses}}
                     <tr data-id="{{this.id}}">
+                        {{!-- <th>{{this.ownerID}}</th> --}}
                         <td>{{this.name}}</td>
                         <td>{{this.barnName}}</td>
-                        {{!-- <td><a href="horse/{{this.id}}">Update Data</a></td> --}}
+                        <td><a href="horse/{{this.id}}">Update Data</a></td>
                         <td><a class="delete">Delete Horse</a></td>
                     </tr>
                 {{/each}}
