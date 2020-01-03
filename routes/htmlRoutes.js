@@ -55,7 +55,7 @@ htmlRoutes.get("/horse", async (req, res) => {
     horses: dbHorses,
     owners: dbOwners
   });
-
+  console.log(dbHorses);
   console.log(dbOwners);
 });
 
