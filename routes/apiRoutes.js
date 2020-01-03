@@ -12,6 +12,11 @@ dataFarm
     res.json(dbHorses);
   })
 
+  .get(async (_req, res) => {
+    const dbOwners = await db.Owners.findAll({});
+    res.json(dbOwners);
+  })
+
   .post(async (req, res) => {
     const dbHorses = await db.Horses.create(req.body);
     res.json(dbHorses);
