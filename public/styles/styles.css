@@ -533,6 +533,7 @@ padding: 20px;
   background-size: cover;
   position: static;
   height: 100%;
+  overflow: hidden;
 }
 
 #event-header {
@@ -640,6 +641,7 @@ background: url(../images/mariana-proenca-yHSJ-hUOxs8-unsplash.jpg)  no-repeat c
     background-size: cover;
     position: static;
     height: 100%;
+    overflow: hidden;
 }
 /* Style for Contact Failure page */
 #contact-failure-message-box {
@@ -666,24 +668,26 @@ background: url(../images/mariana-proenca-yHSJ-hUOxs8-unsplash.jpg)  no-repeat c
       background-size: cover;
       position: static;
       height: 100%;
+      overflow: hidden;
   }
 
 /* Contact Us form styling starts here */
 #contact-head {
   color: #fff;
-  /* padding-left: 20px; */
   padding: 20px;
 }
+
 #contact-us-form {
-    background: url(../images/chad-madden-zy-t2K5JmWE-unsplash.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    position: static;
-    width: 100%;
-    height: 100%;
-    padding-left: 40px;
+  background: url(../images/chad-madden-zy-t2K5JmWE-unsplash.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: static;
+  width: 100%;
+  height: 100%;
+  padding-left: 40px;
+  overflow: hidden;
 }
 
 h5 {
@@ -701,6 +705,29 @@ h6 {
 
 #contact-form {
   background-color:#FFFFFFF0;
-  max-width: 40%;
+  width: 100%;
   padding: 20px;
+  max-width: 500px;
+}
+
+
+@media screen and (max-width: 980px){
+  
+}
+@media screen and (max-width: 768px){
+ 
+}
+
+@media screen and (max-width: 640px){
+  h6 {
+    padding-top: 5px;
+  }
+  #contact-head{
+    font-size: 25px;  
+    padding: 10px 5px;
+
+  }
+  #contact-form {
+    width: 90%;
+  }
 }
