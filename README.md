@@ -52,9 +52,7 @@ If the user clicks on the "Log In" button, they are taken to a login screen. ###
 
 ###IMAGE TO COME###
 
-<strong>After login,</strong>
-
- the application opens to a landing page with information about events and appointments at the stable.
+<strong>After login,</strong> the application opens to a landing page with information about events and appointments at the stable.
 
 ![Owner Login Landing Page](./images_for_README/Owner_Login_Landing_Page_08a.PNG)
 
@@ -63,7 +61,7 @@ The pictures flip to reveal text about each event or appointment:
 
 <strong>If the user who logs in is the stable manager:</strong>
 
-the application opens to a form for entering data about clients (horse owners).
+the application then opens to a form for entering data about clients (horse owners).
 
 ![Owner Data Input Form](./images_for_README/Owner_Info_Input_Form_Page_09a.PNG)
 
@@ -127,7 +125,7 @@ The app also fulfilled a project assignment for University of Kansas Coding Boot
 * MySql and MySql2
 * MySql Workbench
 * jawsDB relational database in the cloud
-* Passport JS
+* Auth0
 * nodemailer
 * nodemon
 * dotenv
