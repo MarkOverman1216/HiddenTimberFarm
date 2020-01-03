@@ -1,7 +1,7 @@
 {
-  "name": "node-handlebars-boilerplate",
+  "name": "HiddenTimberFarm",
   "version": "1.0.0",
-  "description": "Project 2 Starter",
+  "description": "Stable Manager Appp",
   "main": "server.js",
   "scripts": {
     "dev": "nodemon server.js",

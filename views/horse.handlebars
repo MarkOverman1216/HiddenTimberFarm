@@ -13,8 +13,6 @@
                 </div>
                 <div class="style">
                     <label for="sex">Sex</label>
-                    {{!-- <input type="text" id="sex" name="sex"> --}}
-                    {{!-- radio button --}} 
                     <select name="sex" id="sex">
                         <option value=""> Select Option</option>
                         <option value="Gelding">Gelding</option>
@@ -36,8 +34,6 @@
                 </div>
                 <div class="style">
                     <label for="chipped">Chipped</label>
-                    {{!-- <input type="text" id="chipped" name="chipped"> --}}
-                    {{!-- radio button yes or no --}} 
                     <select name="chipped" id="chipped">
                         <option value=""> Select Option</option>
                         <option value="true">Yes</option>
@@ -46,8 +42,6 @@
                 </div>
                 <div class="style">
                     <label for="tattooed">Tattooed</label>
-                    {{!-- <input type="text" id="tattooed" name="tattooed"> --}}
-                    {{!-- radio button yes or no --}}
                     <select name="tattooed" id="tattooed" class="style">
                         <option value=""> Select Option</option>
                         <option value="true">Yes</option>
@@ -80,8 +74,6 @@
                 </div>
                 <div class="style">
                     <label for="quarantine">Quarantine</label>
-                    {{!-- <input type="text" id="quarantine" name="quarantine"> --}}
-                    {{!-- radio button yes or no --}}
                     <select name="quarantine" id="quarantine">
                         <option value=""> Select Option</option>
                         <option value="true">Yes</option>
@@ -91,7 +83,6 @@
                 <div class="style">
                     <label for="out">Move Out Date</label>
                     <input type="date" id="out" name="out">
-                    {{!-- shouldn't be required --}}
                 </div>
                 <div class="style">
                     <label for="owner">Owner Id</label>
@@ -105,6 +96,7 @@
             <table>
                 <thead>
                 <tr>
+                    {{!-- <th>Owner Id</th> --}}
                     <th>First Name</th>
                     <th>Last Name</th>
                     <th>Update Data</th>
@@ -114,6 +106,7 @@
             <tbody>
                 {{#each horses}}
                     <tr data-id="{{this.id}}">
+                        {{!-- <th>{{this.ownerID}}</th> --}}
                         <td>{{this.name}}</td>
                         <td>{{this.barnName}}</td>
                         <td><a href="horse/{{this.id}}">Update Data</a></td>
@@ -123,18 +116,18 @@
             </tbody>
             </table>
         </div>
-    </div>
-    {{!-- stable manager is able to update and delete horse's data --}}
-    {{!-- try to show the horse's data base on owners --}}
-
-    <div class="nav" id="nav">
-        <div class="navIn" id="navIn">
-            <div class="navOut" id="navOut">
-                <ul class="menu menu-hover-lines">
-                    <div class="navLogOut">
-                        <li><a href="/"> Log Out</a></li>
-                    </div>
-                </ul>
+        <div class="nav-horse" id="nav">
+            <div class="navIn" id="navIn">
+                <div class="navOut" id="navOut">
+                    <ul class="menu menu-hover-lines">
+                        <div class="navHome">
+                            <li class=""><a href="/owner">Owners Data | </a></li>
+                        </div>
+                        <div class="navLogOut">
+                            <li id="nav-margin"><a href="/"> Log Out</a></li>
+                        </div>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

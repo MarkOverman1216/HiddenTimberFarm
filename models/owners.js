@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
     {}
   );
   Owner.associate = function(_models) {
-    // associations can be defined here
+    // Associate
   };
   return Owner;
 };

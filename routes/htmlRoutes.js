@@ -11,7 +11,7 @@ htmlRoutes.get("/", async (req, res) => {
   res.render("index");
 });
 
-// POST route from the Contact Us form (currently sends to JLGaumnitz's gmail address)
+// POST route from the Contact Us form (currently sends to a gmail address)
 htmlRoutes.post("/contact", (req, res) => {
   // Instantiate the SMTP server
   const smtpTrans = nodemailer.createTransport({
@@ -33,7 +33,7 @@ htmlRoutes.post("/contact", (req, res) => {
   };
 
   // Attempt to send the email
-  smtpTrans.sendMail(mailOpts, (error, response) => {
+  smtpTrans.sendMail(mailOpts, (error, _response) => {
     if (error) {
       res.render("contactFailure"); // Shows a page indicating failure
     } else {
@@ -62,6 +62,22 @@ htmlRoutes.get("/owner", async (req, res) => {
 
   res.render("owner", {
     owners: dbOwners
+  });
+});
+
+// EDIT OWNER
+htmlRoutes.get("/owner/:id", async (req, res) => {
+  const dbOwner = await db.Owners.findOne({ where: { id: req.params.id } });
+  res.render("editOwner", {
+    owner: dbOwner
+  });
+});
+
+// EDIT HORSE
+htmlRoutes.get("/horse/:id", async (req, res) => {
+  const dbHorse = await db.Horses.findOne({ where: { id: req.params.id } });
+  res.render("editHorse", {
+    horse: dbHorse
   });
 });
 
