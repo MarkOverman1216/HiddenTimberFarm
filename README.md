@@ -63,7 +63,7 @@ The pictures flip to reveal text about each event or appointment:
 
 <strong>If the user who logs in is the stable manager,</strong> the application then opens to a form for entering data about clients (horse owners).
 
-![Owner Data Input Form](./images_for_README/Owner_Info_Input_Form_Page_09a-V2.PNG)
+![Owner Data Input Form](./images_for_README/Owner_Info_Input_Form_Page_09a.PNG)
 
 The form includes data validation, alerting the user when a field is invalid or left blank:
 
@@ -71,7 +71,7 @@ The form includes data validation, alerting the user when a field is invalid or 
 
 The application also has a form for entering data about horses. 
 
-![Horse Data Input Form ](./images_for_README/Horse_Info_Input_Form_Page_10a-v2.PNG)
+![Horse Data Input Form ](./images_for_README/Horse_Info_Input_Form_Page_10a.PNG)
 
 This form also includes validation.
 
