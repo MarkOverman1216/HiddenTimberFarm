@@ -4,6 +4,7 @@ const htmlRoutes = require("./htmlRoutes");
 
 const jwt = require("express-jwt");
 const jwksRsa = require("jwks-rsa");
+const authConfig = require("../auth_config.json");
 
 const router = new Router();
 
@@ -12,10 +13,10 @@ const checkJwt = jwt({
     cache: true,
     rateLimit: true,
     jwksRequestsPerMinute: 5,
-    jwksUri: `https://${process.env.AUTH0Domain}/.well-known/jwks.json`
+    jwksUri: `https://${authConfig.domain}/.well-known/jwks.json`
   }),
-  audience: process.env.AUDIENCE,
-  issuer: `https://${process.env.AUTH0Domain}/`,
+  audience: authConfig.audience,
+  issuer: `https://${authConfig.domain}/`,
   algorithm: ["RS256"]
 });
 
