@@ -18,16 +18,6 @@ let $outDate = $("#out");
 let $ownerId = $("#horse");
 let $horseId = $("#horseId");
 
-const API = {
-  editHorse: function(formData) {
-    return $.ajax({
-      url: "/api/horses/" + $horseId.text(),
-      type: "PUT",
-      data: { ...formData }
-    });
-  }
-};
-
 $(".validateForm").validate({
   rules: {
     name: "required",
@@ -89,7 +79,7 @@ $(".validateForm").validate({
       moveOutDate: $outDate.val(),
       ownerID: $ownerId.val()
     };
-    API.editHorse(horse).then(function() {
+    API.editHorse(horse, $horseId).then(function () {
       $horseName.val("");
       $barnName.val("");
       $horseSex.val("");

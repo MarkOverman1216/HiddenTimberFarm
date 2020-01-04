@@ -13,30 +13,6 @@ let $trailerP = $("#tp");
 let $ownersList = $("tbody");
 
 // The API object contains methods for each kind of request we'll make
-const API = {
-  saveOwner: function(owner) {
-    return $.ajax({
-      headers: {
-        "Content-Type": "application/json"
-      },
-      type: "POST",
-      url: "api/owners",
-      data: JSON.stringify(owner)
-    });
-  },
-  getOwners: function() {
-    return $.ajax({
-      url: "api/owners",
-      type: "GET"
-    });
-  },
-  deleteOwner: function(id) {
-    return $.ajax({
-      url: "api/owners/" + id,
-      type: "DELETE"
-    });
-  }
-};
 
 // input validation before submitting to database
 $(".validateForm").validate({
@@ -83,7 +59,8 @@ $(".validateForm").validate({
       trailerParking: $trailerP.val()
       // trailerParking: choose
     };
-    API.saveOwner(owner).then(function() {
+    console.log(owner);
+    API.saveOwner(owner).then(function () {
       $firstName.val("");
       $lastName.val("");
       $phoneNum.val("");
@@ -99,9 +76,9 @@ $(".validateForm").validate({
   }
 });
 
-const refreshOwners = function() {
-  API.getOwners().then(function(data) {
-    let $owners = data.map(function(owner) {
+const refreshOwners = function () {
+  API.getOwners().then(function (data) {
+    let $owners = data.map(function (owner) {
       let $a1 = $("<a>")
         .text("Update Data")
         .attr("href", "/owner/" + owner.id);
@@ -129,13 +106,13 @@ const refreshOwners = function() {
 };
 
 // delete owner
-const deleteBtn = function() {
+const deleteBtn = function () {
   let idToDelete = $(this)
     .parent("td")
     .parent("tr")
     .attr("data-id");
 
-  API.deleteOwner(idToDelete).then(function() {
+  API.deleteOwner(idToDelete).then(function () {
     refreshOwners();
   });
 };

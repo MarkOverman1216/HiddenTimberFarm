@@ -1,6 +1,7 @@
 const Router = require("express").Router;
 const apiRoutes = require("./apiRoutes");
 const htmlRoutes = require("./htmlRoutes");
+// const secretHtmlRoutes = require("./secretHtmlRoutes");
 
 const jwt = require("express-jwt");
 const jwksRsa = require("jwks-rsa");
@@ -21,6 +22,7 @@ const checkJwt = jwt({
 });
 
 router.use("/api", checkJwt, apiRoutes);
+// router.use("/secret", checkJwt, secretHtmlRoutes);
 router.use("", htmlRoutes);
 
 module.exports = router;

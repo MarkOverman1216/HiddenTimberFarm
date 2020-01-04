@@ -20,30 +20,6 @@ let $horsesList = $("tbody");
 console.log($ownerId.val());
 
 // The API object contains methods for each kind of request we'll make
-const API = {
-  saveHorse: function(horse) {
-    return $.ajax({
-      headers: {
-        "Content-Type": "application/json"
-      },
-      type: "POST",
-      url: "api/horses",
-      data: JSON.stringify(horse)
-    });
-  },
-  getHorses: function() {
-    return $.ajax({
-      url: "api/horses",
-      type: "GET"
-    });
-  },
-  deleteHorse: function(id) {
-    return $.ajax({
-      url: "api/horses/" + id,
-      type: "DELETE"
-    });
-  }
-};
 
 $(".validateForm").validate({
   rules: {
@@ -106,7 +82,7 @@ $(".validateForm").validate({
       moveOutDate: $outDate.val(),
       ownerId: $ownerId.val()
     };
-    API.saveHorse(horse).then(function() {
+    API.saveHorse(horse).then(function () {
       $barnName.val("");
       $horseSex.val("");
       $horseBreed.val("");
@@ -128,9 +104,9 @@ $(".validateForm").validate({
   }
 });
 
-const refreshHorses = function() {
-  API.getHorses().then(function(data) {
-    let $horses = data.map(function(horse) {
+const refreshHorses = function () {
+  API.getHorses().then(function (data) {
+    let $horses = data.map(function (horse) {
       let $a1 = $("<a>")
         .text("Update Data")
         .attr("href", "/horse/" + horse.id);
@@ -157,13 +133,13 @@ const refreshHorses = function() {
 };
 
 // delete owner
-const deleteBtn = function() {
+const deleteBtn = function () {
   let idToDelete = $(this)
     .parent("td")
     .parent("tr")
     .attr("data-id");
 
-  API.deleteHorse(idToDelete).then(function() {
+  API.deleteHorse(idToDelete).then(function () {
     refreshHorses();
   });
 };

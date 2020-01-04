@@ -10,16 +10,6 @@ let $zipNum = $("#zip");
 let $horseNum = $("#horse");
 let $trailerP = $("#tp");
 console.log($ownerId);
-const API = {
-  editOwner: function(formData) {
-    // console.log($ownerId.text(), formData);
-    return $.ajax({
-      url: "/api/owners/" + $ownerId.text(),
-      type: "PUT",
-      data: { ...formData }
-    });
-  }
-};
 
 $(".validateForm").validate({
   rules: {
