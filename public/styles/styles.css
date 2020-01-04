@@ -551,7 +551,6 @@ padding: 20px;
   font-size: 2.5rem;
 }
 .flip-card-box {
-  border :  1px solid red;
   margin: 0 auto;
   max-width: 1440px;
   width: 100%;
@@ -730,9 +729,6 @@ h6 {
 
 
 @media screen and (max-width: 980px){
-  .flip-card-box {
-    border :  1px solid yellow;
-  }
   #event-header {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -745,9 +741,6 @@ h6 {
   }
 }
 @media screen and (max-width: 768px){
-  .flip-card-box {
-    border :  1px solid green;
-  }
   #event-header, #owner-questions-message {
     font-size: 1.8rem;
   }
@@ -756,8 +749,6 @@ h6 {
 @media screen and (max-width: 640px){
   h6 {
     padding-top: 5px;
-  }.flip-card-box {
-    border :  1px solid blue;
   }
   #contact-head{
     font-size: 25px;  
