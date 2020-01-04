@@ -6,6 +6,8 @@ const bodyParser = require("body-parser");
 const routes = require("./routes");
 const db = require("./models");
 
+const path = require("path");
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -24,6 +26,9 @@ app.engine(
 );
 app.set("view engine", "handlebars");
 
+app.get("/auth_config.json", (req, res) => {
+  res.sendFile(path.join(__dirname, "auth_config.json"));
+});
 // Routes
 app.use(routes);
 
