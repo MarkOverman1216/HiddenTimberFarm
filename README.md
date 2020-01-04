@@ -50,10 +50,6 @@ Failed submission of the form yields this screen:
 
 If the user clicks on the "Log In" button at the bottom of the page, they are taken to a login screen. 
 
-###DESCRIPTION TO COME###
-
-###IMAGE TO COME###
-
 <strong>After login,</strong> the application opens to a landing page with information about upcoming stable events and appointments for existing clients.
 
 ![Owner Login Landing Page](./images_for_README/Owner_Login_Landing_Page_08a.PNG)
