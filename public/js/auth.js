@@ -1,12 +1,15 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable camelcase */
+const AUTH0DOMAIN = process.env.AUTH0DOMAIN;
+const AUTH0CLIENTID = process.env.AUTH0CLIENTID;
+const AUDIENCE = process.env.AUDIENCE;
 let auth0 = null;
 // ..
 const configureClient = async () => {
   auth0 = await createAuth0Client({
-    domain: process.env.AUTH0DOMAIN,
-    client_id: process.env.AUTH0CLIENTID,
-    audience: process.env.AUDIENCE
+    domain: AUTH0DOMAIN,
+    client_id: AUTH0CLIENTID,
+    audience: AUDIENCE
   });
 };
 // ..
@@ -25,7 +28,6 @@ window.onload = async () => {
 };
 
 const login = async () => {
-  console.log(window.location);
   await auth0.loginWithRedirect({
     redirect_uri: window.location.origin
   });
