@@ -5,7 +5,7 @@
             <form class="validateForm">
                 <div class="style">
                     <label for="name">Name</label>
-                    <input type="text" id="name" name="name">     
+                    <input type="text" id="name" name="name">
                 </div>
                 <div class="style">
                     <label for="barn">Barn Name</label>
@@ -38,7 +38,7 @@
                         <option value=""> Select Option</option>
                         <option value="true">Yes</option>
                         <option value="false">No</option>
-                    </select> 
+                    </select>
                 </div>
                 <div class="style">
                     <label for="tattooed">Tattooed</label>
@@ -46,7 +46,7 @@
                         <option value=""> Select Option</option>
                         <option value="true">Yes</option>
                         <option value="false">No</option>
-                    </select> 
+                    </select>
                 </div>
                 <div class="style">
                     <label for="vet">Preferred Veterinarian</label>
@@ -78,7 +78,7 @@
                         <option value=""> Select Option</option>
                         <option value="true">Yes</option>
                         <option value="false">No</option>
-                    </select> 
+                    </select>
                 </div>
                 <div class="style">
                     <label for="out">Move Out Date</label>
@@ -90,9 +90,9 @@
                     <select name="owner" id="owner">
                         <option value=""> Select Option</option>
                         {{#each owners}}
-                            <option value={{owner.id}}>{{owner.id}}</option>
+                        <option value={{this.id}}>{{this.id}}. {{this.firstName}} {{this.lastName}}</option>
                         {{/each}}
-                    </select> 
+                    </select>
                 </div>
                 <button id="submit-owner-horse">Submit</button>
             </form>
@@ -101,16 +101,16 @@
             <h3>Horses List</h3>
             <table>
                 <thead>
-                <tr>
-                    {{!-- <th>Owner Id</th> --}}
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Update Data</th>
-                    <th>Delete Horse</th>
-                </tr>
-            </thead>
-            <tbody>
-                {{#each horses}}
+                    <tr>
+                        {{!-- <th>Owner Id</th> --}}
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Update Data</th>
+                        <th>Delete Horse</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each horses}}
                     <tr data-id="{{this.id}}">
                         {{!-- <th>{{this.ownerID}}</th> --}}
                         <td>{{this.name}}</td>
@@ -118,8 +118,8 @@
                         <td><a href="horse/{{this.id}}">Update Data</a></td>
                         <td><a class="delete">Delete Horse</a></td>
                     </tr>
-                {{/each}}
-            </tbody>
+                    {{/each}}
+                </tbody>
             </table>
         </div>
         <div class="nav-horse" id="nav">
@@ -144,4 +144,3 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js"></script>
 {{!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> --}}
 <script src="/js/horses.js"></script>
-
