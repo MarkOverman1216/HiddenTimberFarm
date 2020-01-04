@@ -1,7 +1,7 @@
 {
   "name": "HiddenTimberFarm",
   "version": "1.0.0",
-  "description": "Stable Manager Appp",
+  "description": "Stable Manager App",
   "main": "server.js",
   "scripts": {
     "dev": "nodemon server.js",
