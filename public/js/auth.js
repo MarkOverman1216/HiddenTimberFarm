@@ -1,18 +1,21 @@
-require("dotenv").load();
-const AUTH0DOMAIN = process.env.AUTH0DOMAIN;
-const AUTH0CLIENTID = process.env.AUTH0CLIENTID;
-const AUDIENCE = process.env.AUDIENCE;
 /* eslint-disable no-unused-vars */
 /* eslint-disable camelcase */
 let auth0 = null;
-// ..
+
+const fetchAuthConfig = () => fetch("/auth_config.json");
+
 const configureClient = async () => {
+  const response = await fetchAuthConfig();
+
+  const config = await response.json();
+
   auth0 = await createAuth0Client({
-    domain: AUTH0DOMAIN,
-    client_id: AUTH0CLIENTID,
-    audience: AUDIENCE
+    domain: config.AUTH0DOMAIN,
+    client_id: config.AUTH0CLIENTID,
+    audience: config.AUDIENCE
   });
 };
+
 // ..
 // ..
 window.onload = async () => {
