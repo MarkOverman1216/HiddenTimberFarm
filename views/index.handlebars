@@ -171,7 +171,9 @@
         <div class="navIn" id="navIn">
           <ul class="menu menu-hover-lines">
             <li id="contact-link"><a href="/contact"> Contact Us | </a></li>
-            <li><button id="btn-login" onclick="login()"> Log In </button></li>
+            <li><a href="/ownerlogin"> Log In | </a></li>
+            <li><a href="/owner"> Log In | </a></li>
+            <li><button id="btn-login" onclick="login()" style="color: white;"> LOG IN </button></li>
           </ul>
         </div>
 
@@ -186,12 +188,12 @@
 
             </div> --}}
             {{!-- <div class="navContact">
-              <li><a href="#">Contact- </a></li> --}}
+              <li><a href="#">Contact- </a></li>
 
-        </div>
+        </div> --}}
         <div class="navLogOut">
-          <li><button id="btn-logout" onclick="logout()"> Log Out</button></li>
-
+          <li id="nav-margin"><a href="/">Log Out</a></li>
+          <li><button id="btn-logout" onclick="logout()" style="color: white;"> LOG OUT</button></li>
         </div>
       </ul>
     </div>
