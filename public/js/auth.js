@@ -4,8 +4,8 @@ let auth0 = null;
 // ..
 const configureClient = async () => {
   auth0 = await createAuth0Client({
-    domain: process.env.AUTH0Domain,
-    client_id: process.env.AUTH0clientId,
+    domain: process.env.AUTH0DOMAIN,
+    client_id: process.env.AUTH0CLIENTID,
     audience: process.env.AUDIENCE
   });
 };
@@ -25,6 +25,7 @@ window.onload = async () => {
 };
 
 const login = async () => {
+  console.log(window.location);
   await auth0.loginWithRedirect({
     redirect_uri: window.location.origin
   });
