@@ -540,17 +540,28 @@ padding: 20px;
   color: white;
   text-align: center;
   padding-top: 20px;
-  padding-bottom: 100px;
+  padding-bottom: 65px;
+  font-size: 2.5rem;
 }
 
 #owner-questions-message {
   color: white;
   text-align: center;
   padding-top: 60px;
+  font-size: 2.5rem;
+}
+.flip-card-box {
+  border :  1px solid red;
+  margin: 0 auto;
+  max-width: 1440px;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
 }
 .flip-card {
   background-color: transparent;
-  width: 300px;
+  max-width: 300px;
+  width: 100%;
   height: 200px;
   border: 1px solid rgb(52, 44, 61);
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
@@ -583,6 +594,14 @@ padding: 20px;
 .flip-card-front {
   background-color: #bbb;
   color: black;
+  max-width: 300px;
+  width: 100%;
+  height: 200px;
+}
+.flip-images {
+  max-width: 300px;
+  width: 100%;
+  height: 200px;
 }
 
 /* Style the back side */
@@ -711,15 +730,34 @@ h6 {
 
 
 @media screen and (max-width: 980px){
-  
+  .flip-card-box {
+    border :  1px solid yellow;
+  }
+  #event-header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  #owner-questions-message {
+    padding-top: 10px;
+  }
+  #event-header, #owner-questions-message {
+    font-size: 2rem;
+  }
 }
 @media screen and (max-width: 768px){
- 
+  .flip-card-box {
+    border :  1px solid green;
+  }
+  #event-header, #owner-questions-message {
+    font-size: 1.8rem;
+  }
 }
 
 @media screen and (max-width: 640px){
   h6 {
     padding-top: 5px;
+  }.flip-card-box {
+    border :  1px solid blue;
   }
   #contact-head{
     font-size: 25px;  
@@ -731,5 +769,13 @@ h6 {
   }
   #contact-failure-message-box {
     width: 90%;
+  }
+  #event-header, #owner-questions-message {
+    font-size: 1.6rem;
+  }
+  .flip-images, .flip-card-front, .flip-card {
+    max-width: 200px;
+    width: 100%;
+    height: 150px;
   }
 }
