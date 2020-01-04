@@ -1,8 +1,8 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable camelcase */
 const AUTH0DOMAIN = process.env.AUTH0DOMAIN;
 const AUTH0CLIENTID = process.env.AUTH0CLIENTID;
 const AUDIENCE = process.env.AUDIENCE;
+/* eslint-disable no-unused-vars */
+/* eslint-disable camelcase */
 let auth0 = null;
 // ..
 const configureClient = async () => {
