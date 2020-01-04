@@ -10,7 +10,7 @@
         </h1>
         <h2>Please fill in your name:</h2>
       </div>
-      
+
       <input id="input"></input>
       <button class="button large" id="nameButton">ENTER</button>
     </div>
@@ -24,8 +24,8 @@
     </div>
 
 
-</div>
-<div class="carousel" id="carousel">
+  </div>
+  <div class="carousel" id="carousel">
     <div class="carousel__control">
     </div>
     <div class="carousel__stage">
@@ -41,7 +41,8 @@
                 <p>
                   We here at Hidden Timber Farm work hard to provide a premier boarding experience for our clients and
                   their beloved equine companions. Read on to learn about our horse boarding options and some of
-                  amenities we offer. Then give us a call at 913-123-4567, or fill out the Contact Us form. We look forward to speaking with you.
+                  amenities we offer. Then give us a call at 913-123-4567, or fill out the Contact Us form. We look
+                  forward to speaking with you.
                 </p>
               </div>
               <h3 class="content__index">01</h3>
@@ -60,7 +61,8 @@
                 <div>
                   <img class="spinner-thumbnail" src="/images/boarding-options.jpg" />
                   <h4>STALL WITH RUN-OUT</h4>
-                  All our stalls are 12 x 14-feet to accommodate larger horses. Each has a run-out that allows your horse
+                  All our stalls are 12 x 14-feet to accommodate larger horses. Each has a run-out that allows your
+                  horse
                   outdoor stimulation and healthy movement. Each stall has an automatic waterer, hay feeder, half grille
                   sliding door, and high-quality, three-quarter-inch rubber floor mat. The barn aisles have rubberized
                   flooring as well. Come visit us and we’ll show you around.
@@ -169,7 +171,7 @@
         <div class="navIn" id="navIn">
           <ul class="menu menu-hover-lines">
             <li id="contact-link"><a href="/contact"> Contact Us | </a></li>
-            <li><a href="/ownerlogin"> Log In </a></li>
+            <li><button id="btn-login" onclick="login()"> Log In </button></li>
           </ul>
         </div>
 
@@ -186,15 +188,15 @@
             {{!-- <div class="navContact">
               <li><a href="#">Contact- </a></li> --}}
 
-            </div>
-            <div class="navLogOut">
-              <li><a href="#"> Log Out</a></li>
-
-            </div>
-          </ul>
         </div>
+        <div class="navLogOut">
+          <li><button id="btn-logout" onclick="logout()"> Log Out</button></li>
+
+        </div>
+      </ul>
     </div>
   </div>
+</div>
 
 </div>
 
@@ -214,3 +216,5 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
 <script src="/js/frontend.js"></script>
+<script src="https://cdn.auth0.com/js/auth0-spa-js/1.2/auth0-spa-js.production.js"></script>
+<script src="/js/auth.js"></script>
