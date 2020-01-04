@@ -50,10 +50,12 @@ htmlRoutes.get("/contact", async (req, res) => {
 // HORSE
 htmlRoutes.get("/horse", async (req, res) => {
   const dbHorses = await db.Horses.findAll({});
-
+  const dbOwners = await db.Owners.findAll({});
   res.render("horse", {
-    horses: dbHorses
+    horses: dbHorses,
+    owners: dbOwners
   });
+  console.log(dbOwners);
 });
 
 // OWNER
@@ -76,8 +78,10 @@ htmlRoutes.get("/owner/:id", async (req, res) => {
 // EDIT HORSE
 htmlRoutes.get("/horse/:id", async (req, res) => {
   const dbHorse = await db.Horses.findOne({ where: { id: req.params.id } });
+  const dbOwners = await db.Owners.findAll({});
   res.render("editHorse", {
-    horse: dbHorse
+    horse: dbHorse,
+    owners: dbOwners
   });
 });
 
