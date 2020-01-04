@@ -5,7 +5,7 @@
             <form class="validateForm">
                 <div class="style">
                     <label for="name">Name</label>
-                    <input type="text" id="name" name="name">     
+                    <input type="text" id="name" name="name">
                 </div>
                 <div class="style">
                     <label for="barn">Barn Name</label>
@@ -14,7 +14,7 @@
                 <div class="style">
                     <label for="sex">Sex</label>
                     <select name="sex" id="sex">
-                        <option value=""> Select Option</option>
+                        <option selected hidden disabled> Select Option</option>
                         <option value="Gelding">Gelding</option>
                         <option value="Mare">Mare</option>
                         <option value="Stallion">Stallion</option>
@@ -35,18 +35,18 @@
                 <div class="style">
                     <label for="chipped">Chipped</label>
                     <select name="chipped" id="chipped">
-                        <option value=""> Select Option</option>
+                        <option selected hidden disabled> Select Option</option>
                         <option value="true">Yes</option>
                         <option value="false">No</option>
-                    </select> 
+                    </select>
                 </div>
                 <div class="style">
                     <label for="tattooed">Tattooed</label>
                     <select name="tattooed" id="tattooed" class="style">
-                        <option value=""> Select Option</option>
+                        <option selected hidden disabled> Select Option</option>
                         <option value="true">Yes</option>
                         <option value="false">No</option>
-                    </select> 
+                    </select>
                 </div>
                 <div class="style">
                     <label for="vet">Preferred Veterinarian</label>
@@ -75,10 +75,10 @@
                 <div class="style">
                     <label for="quarantine">Quarantine</label>
                     <select name="quarantine" id="quarantine">
-                        <option value=""> Select Option</option>
+                        <option selected hidden disabled> Select Option</option>
                         <option value="true">Yes</option>
                         <option value="false">No</option>
-                    </select> 
+                    </select>
                 </div>
                 <div class="style">
                     <label for="out">Move Out Date</label>
@@ -86,7 +86,13 @@
                 </div>
                 <div class="style">
                     <label for="owner">Owner Id</label>
-                    <input type="text" id="owner" name="owner">
+                    {{!-- <input type="text" id="owner" name="owner"> --}}
+                    <select name="owner" id="owner">
+                        <option selected hidden disabled> Select Option</option>
+                        {{#each owners}}
+                        <option value={{this.id}}>{{this.id}}. {{this.firstName}} {{this.lastName}}</option>
+                        {{/each}}
+                    </select>
                 </div>
                 <button id="submit-owner-horse">Submit</button>
             </form>
@@ -95,16 +101,16 @@
             <h3>Horses List</h3>
             <table>
                 <thead>
-                <tr>
-                    {{!-- <th>Owner Id</th> --}}
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Update Data</th>
-                    <th>Delete Horse</th>
-                </tr>
-            </thead>
-            <tbody>
-                {{#each horses}}
+                    <tr>
+                        {{!-- <th>Owner Id</th> --}}
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Update Data</th>
+                        <th>Delete Horse</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each horses}}
                     <tr data-id="{{this.id}}">
                         {{!-- <th>{{this.ownerID}}</th> --}}
                         <td>{{this.name}}</td>
@@ -112,8 +118,8 @@
                         <td><a href="horse/{{this.id}}">Update Data</a></td>
                         <td><a class="delete">Delete Horse</a></td>
                     </tr>
-                {{/each}}
-            </tbody>
+                    {{/each}}
+                </tbody>
             </table>
         </div>
         <div class="nav-horse" id="nav">
