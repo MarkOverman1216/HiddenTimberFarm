@@ -42,12 +42,12 @@
                 <div class="style">
                     <label for="tp">Trailer Parking</label>
                     <select name="tp" id="tp">
-                        <option value=""> Select Option</option>
+                        <option selected hidden disabled> Select Option</option>
                         <option value="true">Yes</option>
                         <option value="false">No</option>
                     </select>
                 </div>
-                {{!-- radio button yes or no --}}    
+                {{!-- radio button yes or no --}}
                 {{!-- <label>Trailer Parking</label>
                 <input type="radio" name="radio" value=true>Yes
                 <input type="radio" name="radio" value=false>No --}}
@@ -58,25 +58,25 @@
             <h3>Owners List</h3>
             <table>
                 <thead>
-                <tr>
-                    <th>Owner Id</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Update Data</th>
-                    <th>Delete Owner</th>
-                </tr>
-            </thead>
-            <tbody>
+                    <tr>
+                        <th>Owner Id</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Update Data</th>
+                        <th>Delete Owner</th>
+                    </tr>
+                </thead>
+                <tbody>
                     {{#each owners}}
-                        <tr data-id="{{this.id}}">
-                            <td>{{this.id}}</td>
-                            <td>{{this.firstName}}</td>
-                            <td>{{this.lastName}}</td>
-                            <td><a href="owner/{{this.id}}">Update Data</a></td>
-                            <td><a class="delete">Delete Owner</a></td>
-                        </tr>
+                    <tr data-id="{{this.id}}">
+                        <td>{{this.id}}</td>
+                        <td>{{this.firstName}}</td>
+                        <td>{{this.lastName}}</td>
+                        <td><a href="owner/{{this.id}}">Update Data</a></td>
+                        <td><a class="delete">Delete Owner</a></td>
+                    </tr>
                     {{/each}}
-            </tbody>
+                </tbody>
             </table>
         </div>
         <div class="nav-owner" id="nav">
@@ -93,7 +93,7 @@
                 </div>
             </div>
         </div>
-    </div> 
+    </div>
 </div>
 
 
