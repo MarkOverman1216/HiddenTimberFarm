@@ -1,3 +1,4 @@
+require("dotenv").load();
 const AUTH0DOMAIN = process.env.AUTH0DOMAIN;
 const AUTH0CLIENTID = process.env.AUTH0CLIENTID;
 const AUDIENCE = process.env.AUDIENCE;
