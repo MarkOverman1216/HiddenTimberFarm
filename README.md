@@ -12,7 +12,7 @@ Heroku-deployed app: https://hiddentimberfarm.herokuapp.com/
 
 GitHub repository: https://github.com/MarkOverman1216/HiddenTimberFarm
 
-Demo video: ADD LINK WHEN KNOWN
+Demo video: https://youtu.be/GQ0b37w_lZw
 - - - -
 
 ### How You Can Get Started With This Project ###
